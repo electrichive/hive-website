@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "gatsby"
 import * as slideStyles from "./styles/slide.module.css";
 
 const SlideButton = () => {
   return (
-    <div>
-      <a>Join The Hive</a>
+    <div className={slideStyles.button}>
+      <Link to="/Mentorship" className={slideStyles.buttonText}>Join The Hive</Link>
     </div>
   );
 };
