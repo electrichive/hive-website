@@ -5,7 +5,7 @@ import * as slideStyles from "./styles/slide.module.css";
 const SlideButton = () => {
   return (
     <div className={slideStyles.button}>
-      <Link to="/Mentorship" className={slideStyles.buttonText}>Join The Hive</Link>
+      <Link to="/mentorship" className={slideStyles.buttonText}>Join The Hive</Link>
     </div>
   );
 };
