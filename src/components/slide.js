@@ -1,6 +1,13 @@
 import React from "react";
-import SlideButton from "./slideButton";
 import * as slideStyles from "./styles/slide.module.css";
+
+const SlideButton = () => {
+  return (
+    <div>
+      <a>Join The Hive</a>
+    </div>
+  );
+};
 
 export default function Slide(props){
   //If a button is needed for the slide, this parses the prop and adds.
