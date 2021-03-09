@@ -2,8 +2,8 @@ import React from "react";
 import SlideButton from "./slideButton";
 
 export default function Slide(props){
-  
-  const button = props.button ? <SlideButton/> : ""
+  //If a button is needed for the slide, this parses the prop and adds.
+  const button = props.button ? <SlideButton/> : "";
 
   return (
     <div>
@@ -13,5 +13,5 @@ export default function Slide(props){
         {button}
       </div>
     </div>
-  )
+  );
 }
