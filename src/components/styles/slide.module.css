@@ -1,0 +1,16 @@
+.slide {
+  width: 100%;
+}
+.slideContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.subtitle {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
