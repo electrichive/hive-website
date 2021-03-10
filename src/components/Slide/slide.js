@@ -7,6 +7,7 @@ import * as slideStyles from "./slide.module.css";
  * @returns JSXElement 
  */
 
+//Button specific to the slide so created here
 const SlideButton = () => {
   return (
     <div className={slideStyles.button}>
