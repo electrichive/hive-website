@@ -25,3 +25,11 @@
   color: #fefdf5;
   background-color: #cc5d00;
 }
+@media only screen and (max-width: 600px) {
+  .infoBlockContainer {
+    display: block;
+  }
+  .infoBlock {
+    width: 100%;
+  }
+}
