@@ -1,29 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
 
-<<<<<<< HEAD
-=======
 *,
 *::after,
 *::before {
   box-sizing: border-box;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 :root {
-  --white: #FEFDF5;
-  --gray-light: #C4C4C4;
-  --gray-dark: #5C5C5C;
+  --white: #fefdf5;
+  --gray-light: #c4c4c4;
+  --gray-dark: #5c5c5c;
   --black: #363636;
-  --orange-light: #FFBE42;
-  --orange-med: #F69004;
-  --orange-dark: #CC5D00;
-  --golden: #F0B309;
+  --orange-light: #ffbe42;
+  --orange-med: #f69004;
+  --orange-dark: #cc5d00;
+  --golden: #f0b309;
 
   --header-height: 15vh;
 }
 
 html,
->>>>>>> 6ab9379... Connect /about to / with header links. Create Layout component to more easily include a header and footer on each page. Small horizontal overflow issue on Slide component with the introduction of this Layout.
 body {
   margin: 0px;
   padding: 0px;
