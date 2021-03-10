@@ -1,0 +1,13 @@
+.button {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.light {
+  color: #363636;
+  background-color: #ffbe42;
+}
+.dark {
+  color: white;
+  background-color: #cc5d00;
+}

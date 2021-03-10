@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import * as slideStyles from "./slide.module.css";
+import * as slideStyles from "./button.module.css";
 
 
 export default function Button(props){
@@ -8,7 +8,7 @@ export default function Button(props){
   let theme = props.theme === "light" ? slideStyles.light : slideStyles.dark;
   
   return (
-      <Link to={props.url} className={theme}>
+      <Link to={props.url} className={`${theme} ${slideStyles.button}`}>
         {props.text}
       </Link>
   );
