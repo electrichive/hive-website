@@ -7,7 +7,7 @@ export default function About(){
   return (
     <Layout>
       <Slide title="About Us" subtitle="Subtitle Mission Statement" button="true"/>
-      <Button theme="dark" text="Join the Hive" url="/foss"/>
+      <Button theme="light" text="Join the Hive" url="/foss"/>
     </Layout>
   );
 }

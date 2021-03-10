@@ -8,6 +8,9 @@
   font-weight: 700;
   text-decoration: none;
 }
+.button:hover {
+  box-shadow: 2px 2px 5px black;
+}
 .light {
   color: #363636;
   background-color: #ffbe42;
