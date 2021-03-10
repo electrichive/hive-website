@@ -6,5 +6,17 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    navbar: {
+      items: [
+        ['About Us', '/about'],
+        ['FOSS', '/foss'],
+        ['Mentorship', '/mentorship'],
+        ['Contact', '/contact']
+      ]
+    }
+  },
+  plugins: [
+    "gatsby-plugin-testing"
+  ],
 }
