@@ -4,12 +4,14 @@
 
 .bg {
   background-color: var(--white);
-  height: 15vh;
+  height: var(--header-height);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 4px 0 var(--black);
+  position: fixed;
+  top: 0;
 }
 
 .box {
@@ -42,10 +44,15 @@
   margin-top: auto; /* pushes to very bottom of flexbox */
 }
 
+.nav_link {
+  text-decoration: none;
+}
+
 .nav_item {
   height: 100%;
   width: 10vw; /* => 15vw (width < 750px)*/
   text-align: center;
+  color: var(--black);
   font-size: calc(0.5em + 1vmin);
   line-height: 200%; /* => 150% (height < 630px)*/
   font-weight: bold;

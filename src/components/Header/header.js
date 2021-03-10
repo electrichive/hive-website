@@ -40,15 +40,17 @@ export default function Header({ navbarItems }) {
         <div ref={ref} className={styles.nav_bar}>
 
           {/* Loop through and generate navbar items returned from `data` */}
-          {items.map(([label, _], i) => (
-          <div key={i} className={styles.nav_item} style={{
-            // dynamic navbar item accent bar width - adjusts on any resize
-            borderBottomWidth: `${height*0.13}px` 
-          }}>
-            {label}
-          </div>
+          {items.map(([label, link], i) => (
+          <Link to={link} style={{ textDecoration: 'none' }}>
+            <div key={i} className={styles.nav_item} style={{
+              // dynamic navbar item accent bar width - adjusts on any resize
+              borderBottomWidth: `${height*0.13}px` 
+            }}>
+              {label}
+            </div>
+          </Link>
           ))}
-
+          
         </div>
       </div>
     </div>

@@ -1,8 +1,10 @@
 import React from "react";
-import Header from "../components/Header/header";
+import Layout from "../components/Layout/layout";
 
 export default function Home() {
   return (
-    <Header />
+    <Layout>
+      <p>The Main Page <span role="img" aria-label="nervous smile lol">&#128517;</span></p>
+    </Layout>
   );
 }
