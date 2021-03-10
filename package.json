@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "electric-hive-website-2.0",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Revamp project for Electric Hive website",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -11,21 +11,44 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest",
+    "style:serve": "npx styleguidist server",
+    "style:build": "npx styleguidist build"
   },
   "dependencies": {
     "gatsby": "^2.26.1",
+    "gatsby-link": "^2.11.0",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-use": "^17.1.1"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "babel-jest": "^26.6.3",
+    "babel-loader": "^8.2.2",
+    "babel-preset-gatsby": "^0.12.2",
+    "gatsby-plugin-testing": "^0.3.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "prettier": "2.2.1",
+    "react-styleguidist": "^11.1.5",
+    "react-test-renderer": "^16.14.0",
+    "webpack": "^4.44.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/tomstrat/hive-website"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+    "url": "https://github.com/tomstrat/hive-website/issues"
+  },
+  "browserslist": [
+    ">1%",
+    "defaults",
+    "last 1 version",
+    "Firefox ESR",
+    "not dead"
+  ]
 }

@@ -1,3 +1,7 @@
+
+# gatsby testing
+.testing-static-queries.json
+
 # Logs
 logs
 *.log
