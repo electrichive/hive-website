@@ -1,0 +1,18 @@
+.infoBlock {
+  padding: 20px;
+  text-align: center;
+  width: 50%;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.light {
+  color: #363636;
+  background-color: #ffbe42;
+}
+.dark {
+  color: #fefdf5;
+  background-color: #cc5d00;
+}
