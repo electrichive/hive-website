@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
 
-<<<<<<< HEAD
-=======
 *,
 *::after,
 *::before {
@@ -23,7 +21,6 @@
 }
 
 html,
->>>>>>> 6ab9379... Connect /about to / with header links. Create Layout component to more easily include a header and footer on each page. Small horizontal overflow issue on Slide component with the introduction of this Layout.
 body {
   margin: 0px;
   padding: 0px;
