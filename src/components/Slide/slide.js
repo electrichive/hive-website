@@ -2,6 +2,11 @@ import React from "react";
 import { Link } from "gatsby"
 import * as slideStyles from "./slide.module.css";
 
+/**
+ * Component for a top slide (Hero image with main call to action)
+ * @returns JSXElement 
+ */
+
 const SlideButton = () => {
   return (
     <div className={slideStyles.button}>
