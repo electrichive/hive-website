@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby"
-import * as slideStyles from "./styles/slide.module.css";
+import * as slideStyles from "./slide.module.css";
 
 const SlideButton = () => {
   return (
