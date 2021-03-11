@@ -1,0 +1,38 @@
+:root {
+  --honeycomb-gap-space: 5%;
+  --hexes-wide: 8;
+}
+
+.hexagon {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  height: 240px;
+  width: calc((100% - var(--honeycomb-gap-space)) / var(--hexes-wide));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner {
+  height: 97%;
+  width: 97%;
+  z-index: 1;
+}
+
+.outer {
+  background-color: var(--black);
+  grid-row: 1 / span 3;
+  grid-column: 1 / span 2;
+}
+
+.honeycomb {
+  max-height: 800px;
+  height: 800px;
+  width: 122vw;
+  background-color: var(--gray-dark);
+  display: grid;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: calc(var(--honeycomb-gap-space) / (var(--hexes-wide) + 1));
+  grid-template-rows: repeat(3, 1fr, 2fr) 1fr;
+}
