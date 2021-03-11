@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header/header";
+import Honeycomb from "../Honeycomb/honeycomb";
 import * as styles from "./layout.module.css";
 
 /**
@@ -14,6 +15,7 @@ export default function Layout({ children }) {
       <div className={styles.content}>
         {children}
       </div>
+      <Honeycomb />
     </div>
   );
 }
