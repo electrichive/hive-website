@@ -14,6 +14,30 @@ module.exports = {
         ['Mentorship', '/mentorship'],
         ['Contact', '/contact']
       ]
+    },
+    honeycomb: {
+      socials: [
+        {
+          picUrl: '/svg/zulip.svg',
+          socialUrl: 'https://electrichive.zulipchat.com'
+        },
+        {
+          picUrl: '/svg/twitter.svg',
+          socialUrl: 'https://twitter.com'
+        },
+        {
+          picUrl: '/svg/facebook.svg',
+          socialUrl: 'https://www.facebook.com'
+        },
+        {
+          picUrl: '/svg/github.svg',
+          socialUrl: 'https://github.com/electrichive'
+        },
+        {
+          picUrl: '/svg/linkedin.svg',
+          socialUrl: 'https://www.linkedin.com'
+        },
+      ]
     }
   },
   plugins: [
