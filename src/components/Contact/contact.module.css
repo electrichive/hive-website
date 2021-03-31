@@ -1,0 +1,94 @@
+.slideReverse {
+  width: 100%;
+  background-image: url("../../../static/img/hex3.png");
+  transform: rotate(180deg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1080px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 5vmin;
+}
+
+.slideReverse > * {
+  transform: rotate(-180deg);
+}
+
+label {
+  font-size: 25px;
+}
+
+form {
+  height: 40%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5vmin;
+}
+
+input,
+textarea {
+  background: transparent;
+  border: none;
+  width: 100%;
+  flex-grow: 1;
+  font-size: x-large;
+  color: var(--black);
+}
+
+textarea {
+  resize: none;
+  max-height: 100%;
+  min-height: 35px;
+  overflow-y: scroll;
+  align-self: flex-end;
+  padding: 0;
+}
+
+.ctrlBox {
+  border-bottom: 2px solid var(--black);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 0 10%;
+  gap: 30px;
+}
+
+.msgBox {
+  flex: 0 0 100%;
+}
+
+textarea:-webkit-scrollbar {
+  display: none;
+}
+
+.ctrlBox input:focus,
+.ctrlBox textarea:focus {
+  outline: none;
+}
+
+.inputsBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 85%;
+  justify-content: space-between;
+  align-items: stretch;
+  column-gap: 5%;
+}
+
+.submitButton {
+  background-color: var(--orange-light);
+  padding: 1vmin;
+  border: 2px solid var(--black);
+  font-weight: bold;
+  width: max-content;
+  height: min-content;
+}
