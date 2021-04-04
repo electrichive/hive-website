@@ -12,6 +12,7 @@ import Data from "./content.json"
 export default function Testimonials(){
   return (
     <div className={testiStyles.testimonialsContainer}>
+      <h2>What do others think?</h2>
       <Testimonial img={Data.testimonials[0].img} 
                    author={Data.testimonials[0].author} 
                    content={Data.testimonials[0].content} />

@@ -7,12 +7,13 @@ import * as testiStyles from "./testimonial.module.css";
  * @returns JSXElement 
  */
 
+
 export default function Testimonial(props){
   return (
     <div className={testiStyles.testimonialContainer}>
-      <img src={props.img} className={testiStyles.testimonialImage} />
+      <div style={{backgroundImage:`url(${props.img})`}} className={testiStyles.testimonialImage}></div>
       <p className={testiStyles.testimonialContent}>{props.content}</p>
-      <h3 className={testiStyles.testimonialAuthor}>{props.author}</h3>
+      <h4 className={testiStyles.testimonialAuthor}>{props.author}</h4>
     </div>
   );
 }
