@@ -12,6 +12,7 @@
   box-shadow: 0 0 4px 0 var(--black);
   position: fixed;
   top: 0;
+  z-index: 10;
 }
 
 .box {
