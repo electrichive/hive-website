@@ -12,8 +12,8 @@ export default function Testimonial(props){
   return (
     <div className={"testimonialContainer"}>
       <img src={props.img} className={"testimonialImage"} />
-      <h3 className={"testimonialTitle"}>{props.title}</h3>
       <p className={"testimonialContent"}>{props.content}</p>
+      <h3 className={"testimonialAuthor"}>{props.author}</h3>
     </div>
   );
 }

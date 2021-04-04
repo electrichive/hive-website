@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react";#
+import Testimonial from "./testimonial";
 import { Link } from "gatsby";
 import * as testiStyles from "./testimonial.module.css";
 
@@ -11,6 +12,9 @@ import * as testiStyles from "./testimonial.module.css";
 export default function Testimonials(props){
   return (
     <div className={"testimonialsContainer"}>
+      <Testimonial img="" author="" content="" />
+      <Testimonial img="" author="" content="" />
+      <Testimonial img="" author="" content="" />
     </div>
   );
 }
