@@ -1,12 +1,19 @@
 {
   "testimonials": [
     {
-      "img": "",
-      "author": "Anon - Devloper",
+      "img": "../../../public/img/developer1",
+      "author": "Anon - Devloper 1",
       "content": "Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis."
     },
     {
-
+      "img": "../../../public/img/developer2",
+      "author": "Anon - Devloper 2",
+      "content": "Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis."
+    }
+    {
+      "img": "../../../public/img/developer1",
+      "author": "Anon - Devloper 3",
+      "content": "Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis."
     }
   ]
 }
