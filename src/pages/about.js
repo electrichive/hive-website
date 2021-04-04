@@ -2,6 +2,7 @@ import React from "react";
 import Slide from "../components/Slide/slide";
 import Layout from "../components/Layout/layout";
 import Button from "../components/Button/button";
+import Testimonials from "../components/Testimonial/testimonials";
 import * as aboutStyles from "./styles/about.module.css";
 
 //Blocks specific to the about page so created here
@@ -28,6 +29,7 @@ export default function About(){
         <InfoBlock theme="light" title="Mentorship" text="Test" buttonTheme="dark" buttonText="Sign Up" buttonUrl="/mentorship" />
         <InfoBlock theme="dark" title="Free Open Source Software (FOSS)" text="Test" buttonTheme="light" buttonText="Contribute" buttonUrl="/foss" />
       </div>
+      <Testimonials />
     </Layout>
   );
 }

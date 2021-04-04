@@ -1,6 +1,5 @@
-import React from "react";#
+import React from "react";
 import Testimonial from "./testimonial";
-import { Link } from "gatsby";
 import * as testiStyles from "./testimonial.module.css";
 import Data from "./content.json"
 
@@ -10,9 +9,9 @@ import Data from "./content.json"
  * @returns JSXElement 
  */
 
-export default function Testimonials(props){
+export default function Testimonials(){
   return (
-    <div className={"testimonialsContainer"}>
+    <div className={testiStyles.testimonialsContainer}>
       <Testimonial img={Data.testimonials[0].img} 
                    author={Data.testimonials[0].author} 
                    content={Data.testimonials[0].content} />
