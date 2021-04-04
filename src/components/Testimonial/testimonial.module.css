@@ -8,15 +8,15 @@
   display: flex;
   align-content: center;
 }
-.testimonialContent {
-}
-.testimonialAuthor {
+.testimonialContentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .testimonialImage {
-  width: 200px;
-  height: 200px;
-  float: left;
+  min-width: 200px;
+  min-height: 200px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -24,4 +24,10 @@
   mask-size: 150px;
   mask-repeat: no-repeat;
   mask-position: center;
+}
+.left {
+  order: 0;
+}
+.right {
+  order: 3;
 }

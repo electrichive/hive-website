@@ -15,13 +15,16 @@ export default function Testimonials(){
       <h2>What do others think?</h2>
       <Testimonial img={Data.testimonials[0].img} 
                    author={Data.testimonials[0].author} 
-                   content={Data.testimonials[0].content} />
+                   content={Data.testimonials[0].content}
+                   direction="left" />
       <Testimonial img={Data.testimonials[1].img} 
                    author={Data.testimonials[1].author} 
-                   content={Data.testimonials[1].content} />
+                   content={Data.testimonials[1].content}
+                   direction="right" />
       <Testimonial img={Data.testimonials[2].img} 
                    author={Data.testimonials[2].author} 
-                   content={Data.testimonials[2].content} />
+                   content={Data.testimonials[2].content}
+                   direction="left" />
     </div>
   );
 }
