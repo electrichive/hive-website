@@ -20,14 +20,30 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  mask-image: url("../../../static/img/hex.svg");
+  mask-image: url("../../../static/img/hex-light.svg");
   mask-size: 150px;
   mask-repeat: no-repeat;
   mask-position: center;
+  z-index: 1;
+}
+.testimonialImageBg {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 15px;
+  width: 150px;
+  height: 175px;
+  background-image: url("../../../static/img/hex-light.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .left {
   order: 0;
 }
 .right {
   order: 3;
+}
+.bgright {
+  margin-left: 780px;
+  background-image: url("../../../static/img/hex-dark.svg");
 }

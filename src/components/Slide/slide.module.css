@@ -24,7 +24,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../../../static/img/hex.svg");
+  background-image: url("../../../static/img/hex-light.svg");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
