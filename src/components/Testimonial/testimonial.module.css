@@ -13,8 +13,12 @@
   flex-direction: column;
   justify-content: center;
 }
+.hexContainer {
+  position: relative;
+}
 
 .testimonialImage {
+  position: relative;
   min-width: 200px;
   min-height: 200px;
   background-size: cover;
@@ -27,9 +31,10 @@
   z-index: 1;
 }
 .testimonialImageBg {
+  z-index: 0;
   position: absolute;
-  margin-top: 25px;
-  margin-left: 15px;
+  bottom: -5px;
+  left: 10px;
   width: 150px;
   height: 175px;
   background-image: url("../../../static/img/hex-light.svg");
@@ -44,6 +49,5 @@
   order: 3;
 }
 .bgright {
-  margin-left: 780px;
   background-image: url("../../../static/img/hex-dark.svg");
 }

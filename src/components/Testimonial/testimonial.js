@@ -17,8 +17,10 @@ export default function Testimonial(props){
 
   return (
     <div className={testiStyles.testimonialContainer}>
-      <div style={{backgroundImage:`url(${props.img})`}} className={`${direction} ${testiStyles.testimonialImage}`}></div>
-      <div className={`${bgDirection} ${testiStyles.testimonialImageBg}`}></div>
+      <div className={`${direction} ${testiStyles.hexContainer}`}>
+        <div style={{backgroundImage:`url(${props.img})`}} className={`${testiStyles.testimonialImage}`}></div>
+        <div className={`${bgDirection} ${testiStyles.testimonialImageBg}`}></div>
+      </div>
       <div className={testiStyles.testimonialContentContainer}>
         <p className={testiStyles.testimonialContent}>{props.content}</p>
         <h4 className={testiStyles.testimonialAuthor}>{props.author}</h4>
