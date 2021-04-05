@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Header/header";
+import Footer from "../Footer/footer";
 import * as styles from "./layout.module.css";
 
 /**
@@ -14,6 +15,7 @@ export default function Layout({ children }) {
       <div className={styles.content}>
         {children}
       </div>
+      <Footer />
     </div>
   );
 }
