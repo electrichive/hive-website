@@ -10,7 +10,7 @@ export default function Home() {
       <Slide title="The Electric Hive" subtitle="Subtitle Mission Statement" button="true"/>
       <p>The Main Page <span role="img" aria-label="nervous smile lol">&#128517;</span></p>
       <Parallax url={"./mentorship"} text={"Sign Up"} img={"./img/stock-code1.jpg"} content={"Join Our Mentorship Program Now"}/>
-      <InfoBox title={"Contribute To Our FOSSS"} description={"Lorem Ipsum"}/>
+      <InfoBox title={"Contribute To Our FOSSS"} description={"Lorem Ipsum"} theme={"dark"}/>
     </Layout>
   );
 }

@@ -4,6 +4,13 @@
   align-items: center;
   flex-direction: column;
   padding: 20px 0px;
-  background-color: var(--orange-dark);
   width: 100%;
+}
+.dark {
+  color: var(--white);
+  background-color: var(--orange-dark);
+}
+.light {
+  color: var(--black);
+  background-color: var(--orange-light);
 }
