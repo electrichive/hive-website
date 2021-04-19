@@ -3,20 +3,20 @@
   max-width: 200px;
   margin: 0 auto;
   padding: 10px;
-  border: 2px solid #363636;
+  border: 2px solid var(--black);
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
   text-align: center;
 }
 .button:hover {
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 2px 2px 5px var(--black);
 }
 .light {
-  color: #363636;
-  background-color: #ffbe42;
+  color: var(--black);
+  background-color: var(--orange-light);
 }
 .dark {
-  color: #fefdf5;
-  background-color: #cc5d00;
+  color: var(--white);
+  background-color: var(--orange-dark);
 }

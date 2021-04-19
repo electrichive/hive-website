@@ -11,5 +11,5 @@
   width: 100%;
 }
 .paraContainer h3 {
-  color: #fefdf5;
+  color: var(--white);
 }

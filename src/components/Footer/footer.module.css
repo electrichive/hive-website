@@ -3,8 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 300px;
-  background-color: #363636;
-  color: #fefdf5;
+  background-color: var(--black);
+  color: var(--white);
 }
 .footerColumns {
   display: flex;
@@ -16,11 +16,11 @@
   justify-content: space-around;
 }
 .sitemap_item {
-  color: #fefdf5;
+  color: var(--white);
 }
 .socialMedia a {
   text-decoration: none;
-  color: #fefdf5;
+  color: var(--white);
 }
 
 @media only screen and (max-width: 800px) {

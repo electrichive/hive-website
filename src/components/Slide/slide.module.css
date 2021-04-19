@@ -36,5 +36,5 @@
   font-weight: 700;
   text-align: center;
   text-decoration: none;
-  color: black;
+  color: var(--black);
 }
