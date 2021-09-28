@@ -13,8 +13,8 @@
         "format": "prettier --write .",
         "test": "jest --runInBand",
         "new-component": "hygen component new",
-        "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "storybook": "NODE_ENV=production start-storybook -p 6006",
+        "build-storybook": "NODE_ENV=production build-storybook"
     },
     "dependencies": {
         "gatsby": "^3.14.0",
