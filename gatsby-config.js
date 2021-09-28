@@ -68,6 +68,25 @@ module.exports = {
         'gatsby-plugin-styled-components',
         'gatsby-plugin-postcss',
         {
+            resolve: 'gatsby-plugin-sharp',
+            options: {
+                defaults: {
+                    formats: ['auto', 'webp'],
+                    placeholder: 'dominantColor',
+                    quality: 50,
+                    backgroundColor: 'transparent',
+                    tracedSVGOptions: {},
+                    blurredOptions: {},
+                    jpgOptions: {},
+                    pngOptions: {},
+                    webpOptions: {},
+                    avifOptions: {},
+                },
+            },
+        },
+        'gatsby-transformer-sharp', // for dynamic images
+        'gatsby-plugin-image',
+        {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'images',
