@@ -5,61 +5,28 @@ on:
     branches: [prod, dev]
     paths:
       - '!README.md'
-      - '!src/components/**/*.md'
+      - '!.gitignore'
   pull_request:
     branches: [prod, dev]
-    # tags: []
-    # branches_ignore: []
-    # tags_ignore: []
-  # schedule:
-  # - cron: '* * * * *'
 
-env:
-  DEVICE: ubuntu-latest
-
-# defaults:
-#   run:
-#     shell: bash
-#     working-directory: scripts
 
 jobs:
   build:
-    name: Gatsby Build
-    runs-on: ${{ env.DEVICE }} # could also be written as $DEVICE
-    steps:
-      - uses: actions/checkout@v1
-      - uses: enriikke/gatsby-gh-pages-action@v2
-        with:
-          # access-token: ${{ secrets.ACCESS_TOKEN }}
-          skip-publish: true
-
-  unittests:
-    name: Unit Testing on Gatsby Site
-    needs: [build]
-    runs-on: ${{ env.DEVICE }}
-    outputs:
-      e2e_testing_library: ${{ steps.succeeded.outputs.library }}
-    steps:
-      - run: npm test
-      - id: succeeded
-        run: echo "::set-output name=library::cypress"
-
-  e2etests:
-    name: End-to-End Testing with Cypress
-    needs: [build]
-    runs-on: ${{ env.DEVICE }}
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        machines: [1, 2, 3]  # parallelization parameters with automatic loadbalancing
+        node-version: [12.x, 14.x, 16.x]
     steps:
-      - if: needs.build.outputs.e2e_testing_library == 'cypress'
-        name: Cypress Running
-        uses: cypress-io/github-action@v1
-        timeout-minutes: 10
+      - uses: actions/checkout@v2
+      - name: Using Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
-          record: true
-          parallel: true
-          start: npm start
-          group: 'end to end testing with cypress'
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Installing Dependencies
+        run: npm ci
+      - name: Building production Gatsby
+        run: npm run build
+      - name: Running tests
+        run: npm run test
+
