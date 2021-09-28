@@ -7,6 +7,24 @@ const path = require('path');
 
 module.exports = {
     siteMetadata: {
+        title: 'Electric Hive',
+        description: 'INSERT DESCRIPTION HERE',
+        siteUrl: 'https://www.electrichive.org',
+        url: 'https://www.electrichive.org',
+        image: 'favicon.svg',
+        author: 'Tristan Schrader',
+        organization: {
+            name: 'Electric Hive',
+            url: 'https://www.electrichive.org',
+            logo: 'favicon.svg',
+        },
+        social: {
+            twitter: '@electrichive',
+        },
+        stylesheets: [
+            'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap',
+        ],
+        lastUpdated: '2021-09-26',
         navbar: {
             items: [
                 ['About Us', '/about'],
@@ -67,6 +85,7 @@ module.exports = {
         },
         'gatsby-plugin-styled-components',
         'gatsby-plugin-postcss',
+        'gatsby-plugin-react-helmet',
         {
             resolve: 'gatsby-plugin-sharp',
             options: {
