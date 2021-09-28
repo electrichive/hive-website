@@ -1,40 +1,41 @@
-.slide {
+import styled from 'styled-components';
+import hex3 from 'static/images/hex3.png';
+import hex from 'static/images/hex.svg';
+
+export const Slider = styled.div`
     width: 100%;
-    background-image: url('../../../static/img/hex3.png');
+    background-image: url(${hex3});
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 1080px;
-}
-.slideContent {
+`;
+
+export const Container = styled.div`
     height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.title {
+`;
+
+export const Title = styled.h1`
     font-size: 48px;
-    margin-bottom: 0px;
-}
-.subtitle {
+    margin-bottom: 0;
+`;
+
+export const Subtitle = styled.h2`
     font-size: 30px;
-}
-.button {
+`;
+
+export const Button = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../../static/img/hex.svg');
+    background-image: url(${hex});
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     height: 200px;
     width: 200px;
-}
-.buttonText {
-    font-size: 30px;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-}
+`;
