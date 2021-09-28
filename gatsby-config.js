@@ -118,6 +118,17 @@ module.exports = {
             },
         },
         {
+            resolve: 'gatsby-plugin-mdx',
+            options: {
+                defaultLayouts: {
+                    default: require.resolve(
+                        './src/components/Layout/index.tsx'
+                    ),
+                },
+                extensions: ['.mdx', '.md'],
+            },
+        },
+        {
             resolve: 'gatsby-plugin-sharp',
             options: {
                 defaults: {
@@ -136,6 +147,68 @@ module.exports = {
         },
         'gatsby-transformer-sharp', // for dynamic images
         'gatsby-plugin-image',
+        {
+            resolve: 'gatsby-transformer-remark',
+            options: {
+                plugins: [
+                    'gatsby-remark-responsive-iframe',
+                    {
+                        resolve: 'gatsby-remark-images',
+                        options: {
+                            // maxWidth: 650,
+                            linkImagesToOriginal: true,
+                            showCaptions: false,
+                            // markdownCaptions: true,
+                            backgroundColor: 'transparent',
+                            quality: 50,
+                            // withAvif: true, not working?
+                            loading: 'lazy',
+                            decoding: 'async',
+                        },
+                    },
+                    {
+                        resolve: 'gatsby-remark-copy-linked-files',
+                        options: {
+                            destinationDir: f =>
+                                `mdx-files/${f.hash}/${f.name}`,
+                            ignoreFileExtensions: ['png', 'jpg', 'bmp', 'tiff'],
+                        },
+                    },
+                    {
+                        resolve: 'gatsby-remark-autolink-headers',
+                        options: {
+                            elements: ['h1'],
+                            maintainCase: true,
+                        },
+                    },
+                    {
+                        resolve: 'gatsby-remark-prismjs',
+                        options: {
+                            classPrefix: 'language-',
+                            inlineCodeMarker: '>',
+                            showLineNumbers: false,
+                            noInlineHighlight: false,
+                            prompt: {
+                                user: 'bees?',
+                                host: 'electrichive',
+                                global: false,
+                            },
+                            languageExtensions: [],
+                            escapeEntities: {},
+                        },
+                    },
+                    {
+                        resolve: 'gatsby-remark-smartypants',
+                        options: {
+                            quotes: true,
+                            ellipses: true,
+                            backticks: true,
+                            dashes: 'oldschool',
+                        },
+                    },
+                ],
+            },
+        },
         {
             resolve: 'gatsby-source-filesystem',
             options: {

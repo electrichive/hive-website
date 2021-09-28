@@ -1,0 +1,50 @@
+---
+title: Coding Sandbox example in MDX
+date: '2021-11-26'
+author: Tristan Schrader
+hero_image: ./more_bees.jpg
+hero_image_alt: Bees chilling
+hero_image_credit_text: Dang I forgot
+hero_image_credit_link: 'https://unsplash.com/photos'
+lastmod: '2021-09-28T05:07:20.877Z'
+---
+
+```js{numberLines:2}
+// code block for javascript code with numbered lines starting at 2
+import { variable } from 'my-variables.json';
+```
+
+```bash{promptUser:breh}{outputLines:1,3-4}
+# special bash prompt display "breh" user and specific output lines
+[[ ! -f $FILE ]] && echo "Exists!" || echo "Not exists!" > /dev/null
+echo "not displayed"
+echo "yes displayed"
+echo "yet another display"
+```
+
+**inline formatted code** > `>css .class { color: red; }` for _css_
+
+### no highlighting
+
+```none
+random text
+more text
+import { see how this is not formatted } from 'random unhighlighted string'
+```
+
+# heading
+
+^ this section header should have an anchor link
+
+## responsive iframe
+
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/ujq0DaSa58Y"
+    title="YouTube video player"
+    frameBorder="0"
+    allowFullScreen
+></iframe>
+
+`width` and `height` attributes **must** be set
