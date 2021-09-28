@@ -1,8 +1,7 @@
-:root {
-    --logo-padding: 10px;
-}
+import { Link } from 'gatsby';
+import styled from 'styled-components';
 
-.bg {
+export const Background = styled.div`
     background-color: var(--white);
     height: var(--header-height);
     width: 100%;
@@ -13,62 +12,56 @@
     position: fixed;
     top: 0;
     z-index: 10;
-}
-
-.box {
+`;
+export const Box = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-}
-
-.logo_container {
+`;
+export const Backdrop = styled.div`
     padding-top: var(--logo-padding);
     height: 63%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.logo_link {
+`;
+export const StyledLogoLink = styled(Link)`
     height: calc(100% - var(--logo-padding));
-}
-
-.logo {
+`;
+export const Logo = styled.img`
     height: 100%;
-}
-
-.nav_bar {
+`;
+export const NavBar = styled.div`
     display: flex;
     gap: 9px;
     height: 27%;
-    margin-top: auto; /* pushes to very bottom of flexbox */
-}
+    margin-top: auto;
+`;
 
-.nav_link {
+export const StyledNavLink = styled(Link)`
     text-decoration: none;
-}
+`;
 
-.nav_item {
+type NavItemProps = {
+    height: number;
+};
+export const NavItem = styled.div<NavItemProps>`
     height: 100%;
-    width: 10vw; /* => 15vw (width < 750px)*/
+    width: 10vw;
     text-align: center;
     color: var(--black);
     font-size: calc(0.5em + 1vmin);
-    line-height: 200%; /* => 150% (height < 630px)*/
+    line-height: 200%;
     font-weight: bold;
-    border-bottom: 1px solid var(--orange-light);
-    text-overflow: clip; /* why does this not actually work??? */
-}
+    border-bottom: 1px solid var(--beige);
+    text-overflow: clip;
+    border-bottom-width: ${props => `${props.height * 0.13}px`};
 
-@media all and (max-width: 750px) {
-    .nav_item {
+    @media all and (max-width: 750px) {
         width: 15vw;
     }
-}
-
-@media all and (max-height: 630px) {
-    .nav_item {
+    @media all and (max-height: 630px) {
         line-height: 150%;
     }
-}
+`;
