@@ -65,5 +65,6 @@ module.exports = {
                 allExtensions: true,
             },
         },
+        'gatsby-plugin-postcss',
     ],
 };
