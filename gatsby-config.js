@@ -86,6 +86,37 @@ module.exports = {
         'gatsby-plugin-styled-components',
         'gatsby-plugin-postcss',
         'gatsby-plugin-react-helmet',
+        'gatsby-plugin-sitemap',
+        {
+            resolve: 'gatsby-plugin-manifest',
+            options: {
+                name: 'Electric Hive Website',
+                short_name: 'Electric Hive',
+                description: 'INSERT_DESCRIPTION_HERE',
+                start_url: '/',
+                background_color: '#cc5d00',
+                theme_color: '#f0b309',
+                theme_color_in_head: false,
+                icon: './static/favicon.svg',
+                cache_busting_mode: 'none',
+                display: 'standalone',
+                lang: 'en',
+                // crossOrigin: 'use-credentials',
+            },
+        },
+        {
+            resolve: 'gatsby-plugin-offline',
+            options: {
+                precachePages: ['/about', '/contact'],
+                appendScript: require.resolve('./src/sw.js'),
+                workboxConfig: {
+                    importWorkboxFrom: 'local',
+                    skipWaiting: true,
+                    clientsClaim: true,
+                    globPatterns: ['**/static*'],
+                },
+            },
+        },
         {
             resolve: 'gatsby-plugin-sharp',
             options: {
