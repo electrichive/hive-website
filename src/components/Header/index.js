@@ -3,6 +3,8 @@ import { useMeasure } from 'react-use';
 import { useStaticQuery, graphql } from 'gatsby';
 import Link from 'gatsby-link';
 import * as styles from './header.module.css';
+import backdrop from 'static/images/backdrop.svg';
+
 
 /**
  * Component for a responsive header (logo & tabs along the bottom)
@@ -35,7 +37,7 @@ export default function Header({ navbarItems }) {
                 <div className={styles.logo_container}>
                     <Link to="/" className={styles.logo_link}>
                         <img
-                            src={'/logo.svg'}
+                            src={backdrop}
                             alt="logo"
                             className={styles.logo}
                         />
