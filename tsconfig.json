@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "baseUrl": "./",
+        "jsx": "react-jsxdev",
+        "esModuleInterop": true,
+        "outDir": "./dist",
+        "paths": {
+            "*": ["*", "src/*"],
+            "static/*": ["./static/*"]
+        },
+        "removeComments": true,
+        "sourceMap": true
+    },
+    "exclude": ["node_modules", ".cache"]
+}
