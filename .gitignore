@@ -5,3 +5,4 @@ coverage/
 .templates/
 schema.json
 __generated__/
+.testing-static-queries.json
