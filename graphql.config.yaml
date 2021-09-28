@@ -1,0 +1,8 @@
+schemaPath: src/types/__generated__/schema.json
+documents: src/**/*.{tsx,mdx}
+extensions:
+    languageService:
+        useSchemaFileDefinitions: true
+    endpoints:
+        default:
+            url: http://localhost:8000
