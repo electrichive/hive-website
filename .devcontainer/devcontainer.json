@@ -1,0 +1,25 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.194.0/containers/alpine
+{
+    "name": "Podra",
+    "dockerFile": "Dockerfile",
+    "forwardPorts": [8000],
+    "remoteUser": "vscode",
+    "remoteEnv": {
+        "PATH": "${containerEnv:HOME}/.yarn/bin:${containerEnv:PATH}",
+        "PROJECT": "${containerWorkspaceFolderBasename}",
+        "WORKDIR": "${containerWorkspaceFolder}"
+    },
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker-host.sock,type=bind"
+    ],
+    "extensions": [
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "jpoissonnier.vscode-styled-components",
+        "bradlc.vscode-tailwindcss",
+        "emeraldwalk.runonsave",
+        "dbaeumer.vscode-eslint",
+        "jounqin.vscode-mdx"
+    ]
+}
