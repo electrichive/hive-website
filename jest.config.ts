@@ -7,7 +7,6 @@ const moduleDirs = [
     'styles',
     'tests',
     'types',
-    'utils',
 ];
 const moduleNameMappings = Object.fromEntries(
     moduleDirs.map(dir => [`^${dir}/(.*)`, `<rootDir>/src/${dir}/$1`])
@@ -27,6 +26,5 @@ export default {
     collectCoverageFrom: [
         '<rootDir>/src/components/',
         '<rootDir>/src/pages/',
-        '<rootDir>/src/utils/',
     ],
 } as Config.InitialOptions;

@@ -25,7 +25,6 @@ export default {
             'styles',
             'tests',
             'types',
-            'utils',
         ].forEach(dir => {
             config.resolve.alias[dir] = path.resolve(
                 __dirname,
