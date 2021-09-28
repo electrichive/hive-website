@@ -1,73 +1,74 @@
 :root {
-  --logo-padding: 10px;
+    --logo-padding: 10px;
 }
 
 .bg {
-  background-color: var(--white);
-  height: var(--header-height);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 4px 0 var(--black);
-  position: fixed;
-  top: 0;
+    background-color: var(--white);
+    height: var(--header-height);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px 0 var(--black);
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 
 .box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .logo_container {
-  padding-top: var(--logo-padding);
-  height: 63%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    padding-top: var(--logo-padding);
+    height: 63%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo_link {
-  height: calc(100% - var(--logo-padding));
+    height: calc(100% - var(--logo-padding));
 }
 
 .logo {
-  height: 100%;
+    height: 100%;
 }
 
 .nav_bar {
-  display: flex;
-  gap: 9px;
-  height: 27%;
-  margin-top: auto; /* pushes to very bottom of flexbox */
+    display: flex;
+    gap: 9px;
+    height: 27%;
+    margin-top: auto; /* pushes to very bottom of flexbox */
 }
 
 .nav_link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .nav_item {
-  height: 100%;
-  width: 10vw; /* => 15vw (width < 750px)*/
-  text-align: center;
-  color: var(--black);
-  font-size: calc(0.5em + 1vmin);
-  line-height: 200%; /* => 150% (height < 630px)*/
-  font-weight: bold;
-  border-bottom: 1px solid var(--orange-light);
-  text-overflow: clip; /* why does this not actually work??? */
+    height: 100%;
+    width: 10vw; /* => 15vw (width < 750px)*/
+    text-align: center;
+    color: var(--black);
+    font-size: calc(0.5em + 1vmin);
+    line-height: 200%; /* => 150% (height < 630px)*/
+    font-weight: bold;
+    border-bottom: 1px solid var(--orange-light);
+    text-overflow: clip; /* why does this not actually work??? */
 }
 
 @media all and (max-width: 750px) {
-  .nav_item {
-    width: 15vw;
-  }
+    .nav_item {
+        width: 15vw;
+    }
 }
 
 @media all and (max-height: 630px) {
-  .nav_item {
-    line-height: 150%;
-  }
+    .nav_item {
+        line-height: 150%;
+    }
 }
