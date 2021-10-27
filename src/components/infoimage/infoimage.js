@@ -2,7 +2,7 @@ import React from "react";
 import * as iiStyles from "./infoimage.module.css";
 
 /**
- * Component for a standard infoimage module (has an image and content prop)
+ * Component for a standard infoimage module (has an image, subtitle and content prop)
  * is passed data from the infoimages module
  * @returns JSXElement 
  */
@@ -22,6 +22,7 @@ export default function InfoImage(props){
         <div className={`${bgDirection} ${iiStyles.infoimageBg}`}></div>
       </div>
       <div className={iiStyles.infoimageContentContainer}>
+        <h2>{props.subtitle}</h2>
         <p className={iiStyles.infoimageContent}>{props.content}</p>
       </div>
     </div>

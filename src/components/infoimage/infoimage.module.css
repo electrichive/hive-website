@@ -33,10 +33,10 @@
 .infoimageBg {
   z-index: 0;
   position: absolute;
-  bottom: -5px;
-  left: 10px;
-  width: 300px;
-  height: 350px;
+  left: 15px;
+  bottom: 0;
+  width: 320px;
+  height: 370px;
   background-image: url("../../../static/img/hex-light.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -50,6 +50,8 @@
 }
 .bgright {
   background-image: url("../../../static/img/hex-dark.svg");
+  right: 15px;
+  left: 70px;
 }
 
 @media only screen and (max-width: 800px) {

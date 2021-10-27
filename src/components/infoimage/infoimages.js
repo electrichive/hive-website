@@ -17,12 +17,15 @@ export default function InfoImages(){
     <div className={iiStyles.infoimagesContainer}>
       <InfoImage img={Data.infoimages[0].img} 
                    content={Data.infoimages[0].content}
+                   subtitle={Data.infoimages[0].subtitle}
                    direction="left" />
       <InfoImage img={Data.infoimages[1].img} 
                    content={Data.infoimages[1].content}
+                   subtitle={Data.infoimages[1].subtitle}
                    direction="right" />
       <InfoImage img={Data.infoimages[2].img}
                    content={Data.infoimages[2].content}
+                   subtitle={Data.infoimages[2].subtitle}
                    direction="left" />
     </div>
   );
