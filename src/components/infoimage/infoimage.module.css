@@ -1,6 +1,5 @@
 .infoimagesContainer {
-  width: 70%;
-  margin-top: 100px;
+  width: 90%;
   text-align: center;
 }
 .infoimageContainer {
@@ -19,13 +18,13 @@
 
 .image {
   position: relative;
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 400px;
+  min-height: 400px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   mask-image: url("../../../static/img/hex-light.svg");
-  mask-size: 150px;
+  mask-size: 300px;
   mask-repeat: no-repeat;
   mask-position: center;
   z-index: 1;
@@ -35,8 +34,8 @@
   position: absolute;
   bottom: -5px;
   left: 10px;
-  width: 150px;
-  height: 175px;
+  width: 300px;
+  height: 350px;
   background-image: url("../../../static/img/hex-light.svg");
   background-size: cover;
   background-repeat: no-repeat;
