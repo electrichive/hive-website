@@ -11,6 +11,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0px 50px;
+  text-align: center;
 }
 .title {
   font-size: 48px;
