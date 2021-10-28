@@ -3,8 +3,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px 0px;
+  padding: 100px 150px;
   width: 100%;
+  text-align: center;
 }
 .dark {
   color: var(--white);
