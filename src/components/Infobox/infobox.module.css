@@ -15,3 +15,8 @@
   color: var(--black);
   background-color: var(--orange-light);
 }
+@media only screen and (max-width: 800px) {
+  .infoBlock {
+    padding: 100px 30px;
+  }
+}
