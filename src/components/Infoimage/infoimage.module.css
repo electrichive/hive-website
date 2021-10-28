@@ -62,8 +62,13 @@
   .right {
     order: 0;
   }
-
+  .image {
+    min-width: 200px;
+    min-height: 200px;
+    mask-size: 150px;
+  }
   .infoimageBg {
-    left: 50px;
+    width: 150px;
+    height: 175px;
   }
 }
