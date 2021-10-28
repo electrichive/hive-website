@@ -64,6 +64,12 @@ textarea {
   flex: 0 0 100%;
 }
 
+@media only screen and (max-width: 800px) {
+  .msgBox {
+    flex: 0 0 0%;
+  }
+}
+
 textarea:-webkit-scrollbar {
   display: none;
 }
