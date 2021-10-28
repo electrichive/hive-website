@@ -3,6 +3,7 @@ import Layout from "../components/Layout/layout";
 import Slide from "../components/Slide/slide";
 import Intro from "../components/Intro/intro";
 import Parallax from "../components/Parallax/parallax";
+import Testimonials from "../components/Testimonial/testimonials";
 import Content from "./content/mentorship.json";
 
 //Content for blocks is pulled from JSON in the folder "content"
