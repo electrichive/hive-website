@@ -14,9 +14,8 @@ export default function Mentorship() {
     <Layout>
       <Slide title="Mentorship Program" subtitle="Subtitle Mission Statement" button="true"/>
       <Intro title={Content.intro.title} content={Content.intro.content} />
-      <InfoImages />
       <Parallax url={"./mentorship"} text={"Sign Up"} img={"./img/stock-code1.jpg"} content={"Join Our Mentorship Program Now"}/>
-      <InfoBox title={"Contribute To Our FOSS"} description={Content.infobox.description} theme={"dark"}/>
+      <Testimonials />
     </Layout>
   );
 }

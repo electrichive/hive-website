@@ -13,7 +13,7 @@ export default function Home() {
     <Layout>
       <Slide title="The Electric Hive" subtitle="Subtitle Mission Statement" button="true"/>
       <InfoImages />
-      <Parallax url={"./mentorship"} text={"Sign Up"} img={"./img/stock-code1.jpg"} content={"Join Our Mentorship Program Now"}/>
+      <Parallax url={"./mentorship"} text={"Sign Up"} img={"./img/stock-code1.jpg"} title={"Join Our Mentorship Program Now"}/>
       <InfoBox title={"Contribute To Our FOSS"} description={Content.infobox.description} theme={"dark"}/>
     </Layout>
   );
