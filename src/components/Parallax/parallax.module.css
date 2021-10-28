@@ -7,9 +7,10 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 300px;
   width: 100%;
 }
-.paraContainer h3 {
+.paraContainer h2 {
   color: var(--white);
+  text-shadow: 2px 2px 5px black;
 }

@@ -13,7 +13,7 @@ export default function Parallax(props){
 
   return (
     <div style={{backgroundImage:`url(${props.img})`}} className={paraStyles.paraContainer}>
-      <h3>{props.content}</h3>
+      <h2>{props.content}</h2>
       <Button url={props.url} text={props.text} theme={"light"} />
     </div>
   );
