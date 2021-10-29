@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: center;
   margin-right: 20px;
+  text-align: center;
 }
 .hexContainer {
   position: relative;

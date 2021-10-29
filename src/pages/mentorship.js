@@ -14,11 +14,11 @@ const MentorBlock = (props) => {
   const theme = props.theme === "light" ? mentorStyles.light : mentorStyles.dark;
   const themeContrast = props.theme === "light" ? "dark" : "light";
   return (
-    <div class={mentorStyles.mentorBlock}>
+    <div class={`${theme} ${mentorStyles.mentorBlock}`}>
       <h2>{props.firsttitle}</h2>
       <div class={mentorStyles.mentorContent}>
-        <InfoImage img={props.content} 
-                   content={props.image}
+        <InfoImage img={props.image} 
+                   content={props.content}
                    direction="right" />
       </div>
       <h2>{props.secondtitle}</h2>
@@ -30,7 +30,7 @@ const MentorBlock = (props) => {
         </ul>
       </div>
       <h2>Why not start now?</h2>
-      <Button url="/jointhehive" theme={themeContrast} text="Become a Mentee" />
+      <Button url={props.url} theme={themeContrast} text="Become a Mentee" />
     </div>
   );
 }
@@ -47,13 +47,15 @@ export default function Mentorship() {
                    secondtitle={Content.MentorBlock[0].secondtitle}
                    content={Content.MentorBlock[0].content}
                    image={Content.MentorBlock[0].image}
-                   bullets={Content.MentorBlock[0].bullets}/>
+                   bullets={Content.MentorBlock[0].bullets}
+                   url="/jointhehive"/>
       <MentorBlock theme="dark" 
                    firsttitle={Content.MentorBlock[1].firsttitle}
                    secondtitle={Content.MentorBlock[1].secondtitle}
                    content={Content.MentorBlock[1].content}
                    image={Content.MentorBlock[1].image}
-                   bullets={Content.MentorBlock[1].bullets}/>
+                   bullets={Content.MentorBlock[1].bullets}
+                   url="/jointhehive"/>
       <Testimonials />
       <Parallax url={"./resources"} text={"View Our Resources"} img={"./img/stock-code1.jpg"}/>
     </Layout>
