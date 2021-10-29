@@ -11,6 +11,9 @@ import * as iiStyles from "./infoimage.module.css";
 //image div has inline style as the URL cannot be passed to css
 export default function InfoImage(props){
 
+  //Optional subtitle
+  const subtitle = props.subtitle ? props.subtitle : "";
+
   //This determines which component is the right aligned one.
   const direction = props.direction === "right" ? iiStyles.right : iiStyles.left;
   const bgDirection = props.direction === "right" ? iiStyles.bgright : "";
@@ -22,7 +25,7 @@ export default function InfoImage(props){
         <div className={`${bgDirection} ${iiStyles.infoimageBg}`}></div>
       </div>
       <div className={iiStyles.infoimageContentContainer}>
-        <h2>{props.subtitle}</h2>
+        <h2>{subtitle}</h2>
         <p className={iiStyles.infoimageContent}>{props.content}</p>
       </div>
     </div>
