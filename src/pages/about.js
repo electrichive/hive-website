@@ -6,6 +6,7 @@ import Button from "../components/Button/button";
 import Testimonials from "../components/Testimonial/testimonials";
 import * as aboutStyles from "./styles/about.module.css";
 import Content from "./content/about.json";
+import Heximage from "../components/Heximage/heximage";
 
 //Blocks specific to the about page so created here
 const InfoBlock = (props) => {
@@ -28,6 +29,7 @@ export default function About(){
         <InfoBlock theme="light" title={Content.infoblocks[0].title} text={Content.infoblocks[0].text} buttonTheme="dark" buttonText="Sign Up" buttonUrl="/mentorship" />
         <InfoBlock theme="dark" title={Content.infoblocks[1].title} text={Content.infoblocks[1].text} buttonTheme="light" buttonText="Contribute" buttonUrl="/foss" />
       </div>
+      <Heximage size="large" direction="right" theme="dark" img="./img/developer1.jpg"/>
       <Testimonials />
     </Layout>
   );
