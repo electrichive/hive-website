@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+    ],
+    "settings": {
+        "emeraldwalk.runonsave": {
+            "commands": [
+                {
+                    "match": ".*",
+                    "cmd": "npm run format"
+                }
+            ]
+        },
+        "typescript.tsdk": "./node_modules/typescript/lib"
+    }
+}
