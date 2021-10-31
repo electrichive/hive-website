@@ -1,24 +1,7 @@
 {
-    "tailwindCSS.includeLanguages": {
-        "typescriptreact": "javascript"
-    },
     "editor.quickSuggestions": {
         "strings": true
     },
-    "tailwindCSS.experimental.classRegex": [
-        "tw`([^`]*)", // tw`...`
-        "tw\\.[^`]+`([^`]*)`", // tw.xxx<xxx>`...`
-        "tw\\(.*?\\).*?`([^`]*)" // tw(Component)<xxx>`...`
-    ],
-    "emeraldwalk.runonsave": {
-        "commands": [
-            {
-                "match": ".*",
-                "cmd": "npm run format"
-            }
-        ]
-    },
-    "typescript.tsdk": "./node_modules/typescript/lib",
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
@@ -32,13 +15,5 @@
         "javascriptreact",
         "typescript",
         "typescriptreact"
-    ],
-    "frontMatter.content.pageFolders": [
-        {
-            "title": "content",
-            "path": "[[workspace]]/content"
-        }
-    ],
-    "frontMatter.dashboard.openOnStart": true,
-    "frontMatter.content.autoUpdateDate": true
+    ]
 }
