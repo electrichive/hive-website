@@ -1,10 +1,10 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.194.0/containers/alpine
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.202.5/containers/typescript-node
 {
-    "name": "Podra",
+    "name": "Electric Hive",
+    "runArgs": ["--init"],
     "dockerFile": "Dockerfile",
-    "forwardPorts": [8000],
-    "remoteUser": "vscode",
+    "remoteUser": "node",
     "remoteEnv": {
         "PATH": "${containerEnv:HOME}/.yarn/bin:${containerEnv:PATH}",
         "PROJECT": "${containerWorkspaceFolderBasename}",
@@ -17,7 +17,6 @@
         "esbenp.prettier-vscode",
         "ms-azuretools.vscode-docker",
         "jpoissonnier.vscode-styled-components",
-        "bradlc.vscode-tailwindcss",
         "emeraldwalk.runonsave",
         "dbaeumer.vscode-eslint",
         "jounqin.vscode-mdx"
