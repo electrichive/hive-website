@@ -1,0 +1,39 @@
+.hexContainer {
+  position: relative;
+}
+.image {
+  position: relative;
+  min-width: 400px;
+  min-height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  mask-image: url("../../../static/img/hex-light.svg");
+  mask-size: 300px;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  z-index: 1;
+}
+.infoimageBg {
+  z-index: 0;
+  position: absolute;
+  left: 15px;
+  bottom: 0;
+  width: 320px;
+  height: 370px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.left {
+  order: 0;
+}
+.right {
+  order: 3;
+}
+.dark {
+  background-image: url("../../../static/img/hex-dark.svg");
+}
+.light {
+  background-image: url("../../../static/img/hex-light.svg");
+}
