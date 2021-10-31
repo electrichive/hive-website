@@ -23,8 +23,5 @@ export default {
     setupFilesAfterEnv: ['<rootDir>/tests/setupTestEnv.ts'],
 
     collectCoverage: true,
-    collectCoverageFrom: [
-        '<rootDir>/src/components/',
-        '<rootDir>/src/pages/',
-    ],
+    collectCoverageFrom: ['<rootDir>/src/components/', '<rootDir>/src/pages/'],
 } as Config.InitialOptions;

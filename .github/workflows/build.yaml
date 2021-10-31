@@ -1,32 +1,30 @@
 name: Gatsby CI
 
 on:
-  push:
-    branches: [prod, dev]
-    paths:
-      - '!README.md'
-      - '!.gitignore'
-  pull_request:
-    branches: [prod, dev]
-
+    push:
+        branches: [prod, dev]
+        paths:
+            - '!README.md'
+            - '!.gitignore'
+    pull_request:
+        branches: [prod, dev]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x, 14.x, 16.x]
-    steps:
-      - uses: actions/checkout@v2
-      - name: Using Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - name: Installing Dependencies
-        run: npm ci
-      - name: Building production Gatsby
-        run: npm run build
-      - name: Running tests
-        run: npm run test
-
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [12.x, 14.x, 16.x]
+        steps:
+            - uses: actions/checkout@v2
+            - name: Using Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'npm'
+            - name: Installing Dependencies
+              run: npm ci
+            - name: Building production Gatsby
+              run: npm run build
+            - name: Running tests
+              run: npm run test

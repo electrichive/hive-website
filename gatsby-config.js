@@ -30,33 +30,33 @@ module.exports = {
                 ['About Us', '/about'],
                 ['FOSS', '/foss'],
                 ['Mentorship', '/mentorship'],
-                ['Contact', '/contact']
-            ]
+                ['Contact', '/contact'],
+            ],
         },
         honeycomb: {
             socials: [
                 {
-                picUrl: '/svg/zulip.svg',
-                socialUrl: 'https://electrichive.zulipchat.com'
+                    picUrl: '/svg/zulip.svg',
+                    socialUrl: 'https://electrichive.zulipchat.com',
                 },
                 {
-                picUrl: '/svg/twitter.svg',
-                socialUrl: 'https://twitter.com'
+                    picUrl: '/svg/twitter.svg',
+                    socialUrl: 'https://twitter.com',
                 },
                 {
-                picUrl: '/svg/facebook.svg',
-                socialUrl: 'https://www.facebook.com'
+                    picUrl: '/svg/facebook.svg',
+                    socialUrl: 'https://www.facebook.com',
                 },
                 {
-                picUrl: '/svg/github.svg',
-                socialUrl: 'https://github.com/electrichive'
+                    picUrl: '/svg/github.svg',
+                    socialUrl: 'https://github.com/electrichive',
                 },
                 {
-                picUrl: '/svg/linkedin.svg',
-                socialUrl: 'https://www.linkedin.com'
+                    picUrl: '/svg/linkedin.svg',
+                    socialUrl: 'https://www.linkedin.com',
                 },
-            ]
-        }
+            ],
+        },
     },
     plugins: [
         'gatsby-plugin-testing',

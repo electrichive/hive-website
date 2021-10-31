@@ -18,19 +18,14 @@ export default {
     //     reactDocgen: 'react-docgen-typescript'
     // },
     webpackFinal: async config => {
-        [
-            'components',
-            'pages',
-            'stories',
-            'styles',
-            'tests',
-            'types',
-        ].forEach(dir => {
-            config.resolve.alias[dir] = path.resolve(
-                __dirname,
-                `../src/${dir}`
-            );
-        });
+        ['components', 'pages', 'stories', 'styles', 'tests', 'types'].forEach(
+            dir => {
+                config.resolve.alias[dir] = path.resolve(
+                    __dirname,
+                    `../src/${dir}`
+                );
+            }
+        );
         config.resolve.alias['static'] = path.resolve(__dirname, '../static');
 
         if (typeof config.module.rules[0] === 'object') {
