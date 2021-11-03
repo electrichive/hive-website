@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react';
-import Layout, { LayoutProps } from '.';
+import Layout from '.';
 import Button from 'components/Button';
 
 export default {
