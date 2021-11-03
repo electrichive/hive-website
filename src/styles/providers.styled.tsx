@@ -10,7 +10,11 @@ export const GlobalProvider = createGlobalStyle`
 
 
     body {
+        --sqrt-3: 1.73205;
+
         --header-height: 15vh;
+        --logo-padding: 10px;
+
         --white: #fefdf5;
         --lightgray: #c4c4c4;
         --darkgray: #5c5c5c;
@@ -19,7 +23,6 @@ export const GlobalProvider = createGlobalStyle`
         --gold: #f0b309;
         --orange: #f69004;
         --darkorange: #cc5d00;
-        --logo-padding: 10px;
 
         margin: 0;
         padding: 0;
