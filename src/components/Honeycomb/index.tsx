@@ -1,7 +1,14 @@
-import React, { useLayoutEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import PropTypes from 'prop-types';
-import * as styles from './honeycomb.module.css';
+import {
+    Icon,
+    Item,
+    Inner,
+    Outer,
+    StyledHoneycomb,
+    IconImage,
+} from './honeycomb.styled';
+import { shuffleItems } from 'src/utils';
 
 // how many hexes to include in the honeycomb
 const totalHexes = 18;
@@ -17,71 +24,51 @@ const proportionedOranges = oranges.reduce(
 );
 
 /**
- * Shuffles an array of items unique to the application. Uses a random
- * switching alorithm in O(n) time.
- * @param {(string || number)[]} items_ - Array of strings or numbers to be
- * shuffled (esp. 'proportionedOranges' for color names and 'viable...
- * Indices')
- * @returns a correctly pseudo-randomized array from the same array
- */
-function shuffle(items_) {
-    let items = items_.slice();
-    for (let i = items.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [items[i], items[j]] = [items[j], items[i]];
-    }
-    return items;
-}
-
-/**
  * One hexagonal element of the honeycomb
- * @param {color} color - Background color
- * @param {string?} socialUrl - Optional link to a social media website profile
- * @param {string?} picUrl - Optional reference to a static icon svg
+ * @param color - Background color (should be hexcode formatted)
+ * @param socialUrl - Optional link to a social media website profile
+ * @param picUrl - Optional reference to a static icon svg
  * corresponding to the socialUrl
- * @returns JSXElement
  */
-function HoneycombHex({ color, socialUrl, picUrl }) {
-    const hasSocialIcon = socialUrl && picUrl;
+export function HoneycombHex({
+    color,
+    socialUrl,
+    picUrl,
+}: HoneycombHexProps): JSX.Element {
+    const hasSocialIcon = !!socialUrl && !!picUrl;
 
     // Extracts domain name for img alt-tagging accessibility (if there is a
     // social icon) using regex
+    const regexp = /^https:.+(?<domain>[a-z]+)\.(?!com|org|net)/;
     const domain = hasSocialIcon
-        ? /^https:.+([a-z]+)\.(?!com|org|net)/.exec(socialUrl)
+        ? regexp.exec(socialUrl).groups['domain']
         : null;
 
     return (
-        <div className={`${styles.item}`}>
-            <div className={styles.outer}>
-                <div
-                    className={styles.inner}
-                    style={{ backgroundColor: color }}
-                >
+        <Item>
+            <Outer>
+                <Inner style={{ backgroundColor: color }}>
                     {hasSocialIcon && (
-                        <a href={socialUrl} className={styles.icon}>
-                            <img src={picUrl} alt={domain} />
-                        </a>
+                        <Icon href={socialUrl}>
+                            <IconImage src={picUrl} alt={domain} />
+                        </Icon>
                     )}
-                </div>
-            </div>
-        </div>
+                </Inner>
+            </Outer>
+        </Item>
     );
 }
-HoneycombHex.propTypes = {
-    color: PropTypes.string.isRequired,
-    socialUrl: PropTypes.string,
-    picUrl: PropTypes.string,
-};
 
 /**
  * Semi-randomized honeycomb component generally located near the bottom of each
  * page. This is an iconic visual for the site and has centrally motivated the
  * color scheme.
- * @param {<{ socialUrl: string, picUrl: string }>[]} socials - List of two-link
- * list pairs representing social media profiles and corresponding display icons
- * @returns
+ * @param socials - List of two-link list pairs representing social media
+ * profiles and corresponding display icons
  */
-function Honeycomb({ socialProps }) {
+export default function Honeycomb({
+    socialProps,
+}: HoneycombProps): JSX.Element {
     // ordered array of color hexcodes corresponding to each hexagon in honeycomb
     const [state, setState] = useState([]);
 
@@ -102,7 +89,8 @@ function Honeycomb({ socialProps }) {
     `;
     const socials =
         socialProps ??
-        useStaticQuery(query).site.siteMetadata.honeycomb.socials;
+        (useStaticQuery(query).site.siteMetadata.honeycomb
+            .socials as SocialMetadata[]);
 
     // before the first rendering, pull the actual colors from the document and
     // assign 'state' to the shuffled array of proportioned color names above.
@@ -117,11 +105,11 @@ function Honeycomb({ socialProps }) {
             }),
             {}
         );
-        const state_ = shuffle(proportionedOranges)
+        const state_ = shuffleItems(proportionedOranges)
             .slice(0, totalHexes)
             .map(color => ({ color: domColors[color] }));
 
-        const socialIndices = shuffle(viableHexIndices).slice(
+        const socialIndices = shuffleItems(viableHexIndices).slice(
             0,
             socials.length
         );
@@ -135,20 +123,10 @@ function Honeycomb({ socialProps }) {
     }, [socials]);
 
     return (
-        <div className={styles.honeycomb}>
+        <StyledHoneycomb>
             {state.map((itemState, i) => (
                 <HoneycombHex key={i} {...itemState} />
             ))}
-        </div>
+        </StyledHoneycomb>
     );
 }
-Honeycomb.propTypes = {
-    socials: PropTypes.arrayOf(
-        PropTypes.shape({
-            socialUrl: PropTypes.string.isRequired,
-            picUrl: PropTypes.string.isRequired,
-        })
-    ),
-};
-
-export default Honeycomb;
