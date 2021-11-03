@@ -58,3 +58,9 @@ declare type SlideProps = {
     title?: string;
     subtitle?: string;
 };
+
+declare type TestimonialProps = {
+    img: string;
+    title: string;
+    content: string;
+};
