@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react';
-import Slide, { SlideProps } from '.';
+import Slide from '.';
 
 export default {
     component: Slide,

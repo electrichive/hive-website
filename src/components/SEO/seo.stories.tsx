@@ -6,7 +6,7 @@ export default {
     title: 'Components/SEO',
 } as Meta;
 
-const Template: Story<SEOProps> = args => <SEO {...args} />;
+const Template: Story = args => <SEO {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};
