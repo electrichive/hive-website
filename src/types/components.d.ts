@@ -14,6 +14,21 @@ declare type HeaderProps = {
     navbarItems?: [string, string][];
 };
 
+declare type SocialMetadata = {
+    socialUrl: string;
+    picUrl: string;
+};
+
+declare type HoneycombProps = {
+    socialProps?: SocialMetadata[];
+};
+
+declare type HoneycombHexProps = {
+    color: string;
+    socialUrl?: string;
+    picUrl?: string;
+};
+
 declare type LayoutProps = Empty;
 
 declare type Organization = {
