@@ -2,7 +2,7 @@ declare type Empty = Record<never, never>;
 
 declare type ButtonProps = {
     text?: string;
-    theme?: 'light';
+    theme?: string;
     url?: string;
 };
 
@@ -67,7 +67,7 @@ declare type SchemaOrgProps = {
 };
 
 declare type InfoBlockProps = {
-    theme?: 'light';
+    theme?: string;
     title?: string;
     text?: string;
     button: ButtonProps;
@@ -95,7 +95,7 @@ declare type InfoBoxProps = {
 };
 
 declare type MentorBlockProps = {
-    theme?: 'light';
+    theme?: string;
     firsttitle: string;
     image: string;
     content: string;
