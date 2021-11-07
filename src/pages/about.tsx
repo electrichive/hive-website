@@ -1,10 +1,7 @@
-import Slide from 'components/Slide';
-import Layout from 'components/Layout';
-import Button from 'components/Button';
-import styled from 'styled-components';
+import { Intro, Slide, Layout, Button, Heximage } from 'components';
+import { Testimonials } from 'src/components/Testimonial';
 import { lightThemeMixin, darkThemeMixin } from 'styles/mixins.styled';
-
-// type ButtonProps = Parameters<typeof Button>;
+import styled from 'styled-components';
 
 function InfoBlock(props: InfoBlockProps): JSX.Element {
     return (
@@ -33,11 +30,6 @@ const InfoBlockDiv = styled.div<Partial<InfoBlockProps>>`
     ${props => (props.theme ? lightThemeMixin : darkThemeMixin)}
 `;
 
-const IntroContainer = styled.div`
-    margin-bottom: 80px;
-    width: 70%;
-    text-align: center;
-`;
 const introHeading = 'Who Are The Electric Hive?';
 const introDescription = `
     Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna,
@@ -52,7 +44,7 @@ const introDescription = `
 
 const InfoBlockContainer = styled.div`
     display: flex;
-    width: 100%auto;
+    width: 100%;
 
     @media (max-width: 640px) {
         display: block;
@@ -67,10 +59,7 @@ export default function PageAbout(): JSX.Element {
                 subtitle="Subtitle Mission Statement"
                 button={true}
             />
-            <IntroContainer>
-                <h2>{introHeading}</h2>
-                <p>{introDescription}</p>
-            </IntroContainer>
+            <Intro title={introHeading} content={introDescription} />
             <InfoBlockContainer>
                 <InfoBlock
                     theme="light"
@@ -91,6 +80,13 @@ export default function PageAbout(): JSX.Element {
                     }}
                 />
             </InfoBlockContainer>
+            <Heximage
+                size="large"
+                direction="right"
+                theme="dark"
+                img="/img/developer1.jpg"
+            />
+            <Testimonials />
         </Layout>
     );
 }
