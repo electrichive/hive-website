@@ -7,6 +7,8 @@ export const StyledLink = styled(Link)`
     max-width: 200px;
     margin: 0 auto;
     padding: 8px;
+    border: 2px solid var(--black);
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
