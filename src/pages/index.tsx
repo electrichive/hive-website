@@ -1,15 +1,27 @@
-// import Layout from 'components/Layout';
-import Layout from 'components/Layout';
+import { InfoImages } from 'components/Infoimage';
+import { Infobox, Layout, Parallax, Slide } from 'components';
 
 export default function PageHome(): JSX.Element {
     return (
         <Layout>
-            <p>
-                The Main Page{' '}
-                <span role="img" aria-label="nervous smile lol">
-                    &#128517;
-                </span>
-            </p>
+            <Slide
+                title="The Electric Hive"
+                subtitle="Subtitle Mission Statement"
+                button={true}
+            />
+            <InfoImages />
+            <Parallax
+                url="./mentorship"
+                text="Sign Up"
+                img="./img/stock-code1.jpg"
+                title="Join Our Mentorship Program Now"
+            />
+            <Infobox
+                title="Contribute To Our FOSS"
+                description={Content.infobox.description}
+                content="..."
+                theme="dark"
+            />
         </Layout>
     );
 }
