@@ -1,4 +1,4 @@
-import Layout from 'components/Layout';
+import { Layout } from 'components';
 
 export default function ContactPage(): JSX.Element {
     return (
