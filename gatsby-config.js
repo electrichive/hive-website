@@ -33,6 +33,11 @@ module.exports = {
                 ['Contact', '/contact'],
             ],
         },
+        contactInfo: {
+            email: 'info@electrichive.org',
+            telephone: '012 345 6789',
+            address: '123 Main St, City, ST 67890',
+        },
         honeycomb: {
             socials: [
                 {
