@@ -31,6 +31,12 @@ export const GlobalProvider = createGlobalStyle`
         font-weight: 400;
     }
 
+    p {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 28px;
+    }
 
     h1,
     h2,
