@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react';
-import Page404, { Page404Props } from 'pages/404';
+import Page404, { Page404Props } from 'src/pages/404/404';
 
 export default {
     component: Page404,
