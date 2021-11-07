@@ -5,6 +5,7 @@ import { PropsWithChildren } from 'react';
 import { Content, Flow } from './layout.styled';
 import { GlobalProvider } from 'styles/providers.styled';
 import Honeycomb from '../Honeycomb';
+import Footer from 'components/Footer';
 
 /**
  * Component for a responsive header (logo & tabs along the bottom)
@@ -21,6 +22,7 @@ export default function Layout({
                 <Content>{children}</Content>
                 <Honeycomb />
                 <Contact />
+                <Footer />
             </Flow>
         </>
     );
