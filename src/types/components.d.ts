@@ -10,8 +10,28 @@ declare type ContactProps = {
     heading?: string;
 };
 
+declare type NavbarItems = [string, string][];
+declare type ContactInfo = {
+    email: string;
+    telephone: string;
+    address: string;
+};
+
 declare type HeaderProps = {
-    navbarItems?: [string, string][];
+    navbarItems?: NavbarItems;
+};
+
+declare type FooterProps = {
+    sitemapItems?: NavbarItems;
+    contactInfo?: ContactInfo;
+    socialLinks?: string[];
+};
+
+declare type HeximageProps = {
+    img: string;
+    theme?: string;
+    direction?: string;
+    size?: string;
 };
 
 declare type SocialMetadata = {
@@ -63,4 +83,41 @@ declare type TestimonialProps = {
     img: string;
     title: string;
     content: string;
+    direction: string;
+    author: string;
+};
+
+declare type InfoBoxProps = {
+    theme: string;
+    title: string;
+    description: string;
+    content: string;
+};
+
+declare type MentorBlockProps = {
+    theme?: 'light';
+    firsttitle: string;
+    image: string;
+    content: string;
+    secondtitle: string;
+    bullets: string[];
+};
+
+declare type InfoImageProps = {
+    img: string;
+    subtitle?: string;
+    direction: string;
+    content: string;
+};
+
+declare type IntroProps = {
+    title: string;
+    content: string;
+};
+
+declare type ParallaxProps = {
+    title: string;
+    img: string;
+    url: string;
+    text: string;
 };
