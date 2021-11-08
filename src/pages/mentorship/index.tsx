@@ -1,10 +1,14 @@
-import { Button, Infoimage, Intro, Layout, Parallax, Slide } from 'components';
-import { Testimonials } from 'components/Testimonial';
 import {
-    Bullet,
-    MentorContent,
-    StyledMentorBlock,
-} from 'styles/pages/mentorship.styled';
+    Button,
+    Infoimage,
+    Intro,
+    Layout,
+    Parallax,
+    Slide,
+    Testimonials,
+} from 'components';
+import content from './mentorship.json';
+import { Bullet, MentorContent, StyledMentorBlock } from './mentorship.styled';
 
 //Local component as this only appears on the mentorship page
 function MentorBlock(props: MentorBlockProps): JSX.Element {
@@ -48,18 +52,10 @@ export default function Mentorship(): JSX.Element {
                 subtitle="Subtitle Mission Statement"
                 button={true}
             />
-            <Intro {...Content.intro} />
-            <MentorBlock
-                theme="light"
-                url="/jointhehive"
-                {...Content.MentorBlock[0]}
-            />
-            <MentorBlock
-                theme="dark"
-                url="/jointhehive"
-                {...Content.MentorBlock[1]}
-            />
-            <Testimonials />
+            <Intro {...content.intro} />
+            <MentorBlock theme="light" {...content.mentorblocks[0]} />
+            <MentorBlock theme="dark" {...content.mentorblocks[1]} />
+            <Testimonials testimonials={content.testimonials} />
             <Parallax
                 url="./resources"
                 text="View Our Resources"
