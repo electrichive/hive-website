@@ -214,11 +214,12 @@ module.exports = {
                 ],
             },
         },
+        'gatsby-transformer-json',
         {
             resolve: 'gatsby-source-filesystem',
             options: {
                 name: 'images',
-                path: './static/images/',
+                path: './static/img/',
             },
             __key: 'images',
         },
