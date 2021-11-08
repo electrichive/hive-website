@@ -75,8 +75,3 @@ export const ContentContainer = styled.div`
 
 export const Subtitle = styled.h2``;
 export const Content = styled.p``;
-
-export const ImagesContainer = styled.div`
-    width: 70%;
-    text-align: center;
-`;
