@@ -51,11 +51,6 @@ export const ContentContainer = styled.div`
 `;
 export const Content = styled.p``;
 export const Author = styled.h4``;
-export const TestimonialsContainer = styled.div`
-    width: 70%;
-    margin-top: 100px;
-    text-align: center;
-`;
 export const HexContainer = styled.div<Pick<TestimonialProps, 'direction'>>`
     position: relative;
     order: ${props => (props.direction === 'right' ? '3' : '0')};

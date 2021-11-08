@@ -81,10 +81,18 @@ declare type SlideProps = {
 
 declare type TestimonialProps = {
     img: string;
-    title: string;
+    // title: string;
     content: string;
     direction: string;
     author: string;
+};
+
+declare type PickOut<T, U> = {
+    [K in Exclude<keyof T, U>]: T[K];
+};
+
+declare type TestimonialsProps = {
+    testimonials: PickOut<TestimonialProps, 'direction'>[];
 };
 
 declare type InfoBoxProps = {
@@ -101,6 +109,7 @@ declare type MentorBlockProps = {
     content: string;
     secondtitle: string;
     bullets: string[];
+    url: string;
 };
 
 declare type InfoImageProps = {
@@ -110,13 +119,17 @@ declare type InfoImageProps = {
     content: string;
 };
 
+declare type InfoImagesProps = {
+    infoimages: PickOut<InfoImageProps, 'direction'>[];
+};
+
 declare type IntroProps = {
     title: string;
     content: string;
 };
 
 declare type ParallaxProps = {
-    title: string;
+    title?: string;
     img: string;
     url: string;
     text: string;
