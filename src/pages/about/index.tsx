@@ -1,7 +1,13 @@
-import { Intro, Slide, Layout, Button, Heximage } from 'components';
-import { Testimonials } from 'src/components/Testimonial';
-import { lightThemeMixin, darkThemeMixin } from 'styles/mixins.styled';
-import styled from 'styled-components';
+import {
+    Intro,
+    Slide,
+    Layout,
+    Button,
+    Heximage,
+    Testimonials,
+} from 'components';
+import content from './about.json';
+import { InfoBlockContainer, InfoBlockDiv } from './about.styled';
 
 function InfoBlock(props: InfoBlockProps): JSX.Element {
     return (
@@ -13,44 +19,6 @@ function InfoBlock(props: InfoBlockProps): JSX.Element {
     );
 }
 
-const InfoBlockDiv = styled.div<Partial<InfoBlockProps>>`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    min-height: 400px;
-    padding: 20px;
-    text-align: center;
-
-    @media (max-width: 640px) {
-        width: 100%;
-    }
-
-    ${props => (props.theme ? lightThemeMixin : darkThemeMixin)}
-`;
-
-const introHeading = 'Who Are The Electric Hive?';
-const introDescription = `
-    Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna,
-    at mattis tortor dignissim vel. Proin eu velit ultrices arcu
-    mattis consequat sit amet sed diam. Fusce odio leo,
-    tristique quis lobortis vel, commodo id turpis. Phasellus
-    dapibus massa in auctor venenatis. Donec erat erat,
-    scelerisque sit amet mauris eu, euismod mattis mi. Nulla
-    facilisi. Mauris eleifend ultrices velit ac sodales. Etiam
-    accumsan finibus leo id hendrerit.
-`;
-
-const InfoBlockContainer = styled.div`
-    display: flex;
-    width: 100%;
-
-    @media (max-width: 640px) {
-        display: block;
-    }
-`;
-
 export default function PageAbout(): JSX.Element {
     return (
         <Layout>
@@ -59,7 +27,7 @@ export default function PageAbout(): JSX.Element {
                 subtitle="Subtitle Mission Statement"
                 button={true}
             />
-            <Intro title={introHeading} content={introDescription} />
+            <Intro {...content.intro} />
             <InfoBlockContainer>
                 <InfoBlock
                     theme="light"
@@ -86,7 +54,7 @@ export default function PageAbout(): JSX.Element {
                 theme="dark"
                 img="/img/developer1.jpg"
             />
-            <Testimonials />
+            <Testimonials testimonials={content.testimonials} />
         </Layout>
     );
 }
