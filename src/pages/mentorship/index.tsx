@@ -7,10 +7,13 @@ import {
     Slide,
     Testimonials,
 } from 'components';
+import { pickRandomN, useTestimonials } from 'utils';
 import content from './mentorship.json';
 import { Bullet, MentorContent, StyledMentorBlock } from './mentorship.styled';
 
-//Local component as this only appears on the mentorship page
+/**
+ *
+ */
 function MentorBlock(props: MentorBlockProps): JSX.Element {
     const themeContrast = props.theme === 'light' ? 'dark' : 'light';
     return (
@@ -42,9 +45,11 @@ function MentorBlock(props: MentorBlockProps): JSX.Element {
 }
 
 /**
- * Content for blocks is pulled from JSON in the folder "content"
+ * Content for testimonials is pulled from data JSON
  */
 export default function Mentorship(): JSX.Element {
+    const MAX_TESTIMONIALS = 3;
+    const testimonials = pickRandomN(useTestimonials(), MAX_TESTIMONIALS);
     return (
         <Layout>
             <Slide
@@ -55,7 +60,7 @@ export default function Mentorship(): JSX.Element {
             <Intro {...content.intro} />
             <MentorBlock theme="light" {...content.mentorblocks[0]} />
             <MentorBlock theme="dark" {...content.mentorblocks[1]} />
-            <Testimonials testimonials={content.testimonials} />
+            <Testimonials testimonials={testimonials} />
             <Parallax
                 url="./resources"
                 text="View Our Resources"

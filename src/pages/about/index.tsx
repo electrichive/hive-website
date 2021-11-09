@@ -7,6 +7,7 @@ import {
     Testimonials,
 } from 'components';
 import content from './about.json';
+import { pickRandomN, useTestimonials } from 'utils';
 import { InfoBlockContainer, InfoBlockDiv } from './about.styled';
 
 function InfoBlock(props: InfoBlockProps): JSX.Element {
@@ -20,6 +21,8 @@ function InfoBlock(props: InfoBlockProps): JSX.Element {
 }
 
 export default function PageAbout(): JSX.Element {
+    const MAX_TESTIMONIALS = 3;
+    const testimonials = pickRandomN(useTestimonials(), MAX_TESTIMONIALS);
     return (
         <Layout>
             <Slide
@@ -54,7 +57,7 @@ export default function PageAbout(): JSX.Element {
                 theme="dark"
                 img="/img/developer1.jpg"
             />
-            <Testimonials testimonials={content.testimonials} />
+            <Testimonials testimonials={testimonials} />
         </Layout>
     );
 }

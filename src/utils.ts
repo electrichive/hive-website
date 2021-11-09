@@ -1,3 +1,5 @@
+import { graphql, useStaticQuery } from 'gatsby';
+
 /**
  * Shuffles an array of items unique to the application. Uses a random
  * switching alorithm in O(n) time.
@@ -13,4 +15,37 @@ export function shuffleItems<T>(items_: T[]): T[] {
         [items[i], items[j]] = [items[j], items[i]];
     }
     return items;
+}
+
+/**
+ * React Hook to query gatsby graphql schema for testimonial data
+ * @returns all testimonial data
+ */
+export function useTestimonials(): TestimonialsProps['testimonials'] {
+    const testimonials: TestimonialsProps['testimonials'] = useStaticQuery(
+        graphql`
+            query {
+                allDataJson {
+                    edges {
+                        node {
+                            img
+                            author
+                            content
+                        }
+                    }
+                }
+            }
+        `
+    ).allDataJson.edges.map(
+        (edge: GatsbyNode<TestimonialWithoutDirection>) => edge.node
+    );
+
+    return testimonials;
+}
+
+/**
+ *
+ */
+export function pickRandomN<T>(items: T[], limit?: number): T[] {
+    return shuffleItems(items).slice(0, limit ?? items.length);
 }
