@@ -32,22 +32,5 @@
                 "Bullet 5"
             ]
         }
-    ],
-    "testimonials": [
-        {
-            "img": "./img/developer1.jpg",
-            "author": "Anon - Developer 1",
-            "content": "Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis."
-        },
-        {
-            "img": "./img/developer2.jpg",
-            "author": "Anon - Developer 2",
-            "content": "Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis."
-        },
-        {
-            "img": "./img/developer1.jpg",
-            "author": "Anon - Developer 3",
-            "content": "Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis."
-        }
     ]
 }
