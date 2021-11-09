@@ -91,8 +91,14 @@ declare type PickOut<T, U> = {
     [K in Exclude<keyof T, U>]: T[K];
 };
 
+declare type GatsbyNode<T> = { node: T };
+
+declare type TestimonialWithoutDirection = PickOut<
+    TestimonialProps,
+    'direction'
+>;
 declare type TestimonialsProps = {
-    testimonials: PickOut<TestimonialProps, 'direction'>[];
+    testimonials: TestimonialWithoutDirection[];
 };
 
 declare type InfoBoxProps = {
