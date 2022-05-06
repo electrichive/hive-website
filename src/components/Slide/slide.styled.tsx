@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import hex3 from 'static/images/hex3.png';
-import hex from 'static/images/hex.svg';
+import hex3 from 'static/img/png/hex3.png';
+import hex from 'static/img/svg/hex.svg';
 
 export const Slider = styled.div`
     width: 100%;
