@@ -3,6 +3,9 @@
 {
     "name": "Electric Hive",
     "runArgs": ["--init"],
+    // "initializeCommand": [
+	// 	"docker", "build", "--no-cache", "--progress=plain", ".devcontainer"
+	// ],
     "dockerFile": "Dockerfile",
     "remoteUser": "node",
     "remoteEnv": {
@@ -20,5 +23,6 @@
         "emeraldwalk.runonsave",
         "dbaeumer.vscode-eslint",
         "jounqin.vscode-mdx"
-    ]
+    ],
+    "postCreateCommand": "npm install",
 }
