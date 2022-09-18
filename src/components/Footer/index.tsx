@@ -28,7 +28,10 @@ export default function Footer({
                     navbar {
                         items
                     }
-                    contactInfo
+                    contactInfo {
+                        telephone
+                        address
+                    }
                     honeycomb {
                         socials {
                             socialUrl
@@ -52,8 +55,8 @@ export default function Footer({
     const linksFormatted: [string, string][] = (
         socialLinks ?? socialLinksMetadata
     ).map(link => [
-        link.match(/^https:\/\/(?:www\.)?(.)/).groups[1].toUpperCase(),
-        link,
+        link.socialUrl.match(/^https:\/\/(?:www\.)?(.)/)[1].toUpperCase(),
+        link.socialUrl,
     ]);
 
     return (

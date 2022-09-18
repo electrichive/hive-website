@@ -39,7 +39,9 @@ export function HoneycombHex({
 
     // Extracts domain name for img alt-tagging accessibility (if there is a
     // social icon) using regex
-    const regexp = /^https:.+(?<domain>[a-z]+)\.(?!com|org|net)/;
+    const regexp = /^https:\/\/(www\.)?(?<domain>[a-z]*)/;
+    console.log(hasSocialIcon, socialUrl);
+    console.log(regexp.exec(socialUrl));
     const domain = hasSocialIcon
         ? regexp.exec(socialUrl).groups['domain']
         : null;

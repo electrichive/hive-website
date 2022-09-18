@@ -25,7 +25,7 @@ export function useTestimonials(): TestimonialsProps['testimonials'] {
     const testimonials: TestimonialsProps['testimonials'] = useStaticQuery(
         graphql`
             query {
-                allDataJson {
+                allTestimonialsJson {
                     edges {
                         node {
                             img

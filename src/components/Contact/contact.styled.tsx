@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import hex3 from 'static/images/hex3.png';
+import hex3 from 'static/img/png/hex3.png';
 
 export const Heading = styled.h1``;
 

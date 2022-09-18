@@ -1,6 +1,6 @@
 import { useMeasure } from 'react-use';
 import { useStaticQuery, graphql } from 'gatsby';
-import backdrop from 'static/images/backdrop.svg';
+import backdrop from 'static/img/svg/backdrop.svg';
 import {
     Background,
     Box,
