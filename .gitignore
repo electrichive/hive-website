@@ -6,3 +6,4 @@ coverage/
 schema.json
 __generated__/
 .testing-static-queries.json
+.direnv/
