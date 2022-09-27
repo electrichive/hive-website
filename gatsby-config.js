@@ -62,6 +62,20 @@ module.exports = {
                 },
             ],
         },
+        testimonials: {
+            items: [
+                {
+                    img: '/jpg/developer1.jpg',
+                    author: 'Tom Strat',
+                    content: 'This is a test',
+                },
+                {
+                    img: '/jpg/developer2.jpg',
+                    author: 'Som Ttrat',
+                    content: 'This is another test',
+                },
+            ],
+        },
     },
     plugins: [
         'gatsby-plugin-testing',

@@ -23,6 +23,7 @@ function InfoBlock(props: InfoBlockProps): JSX.Element {
 export default function PageAbout(): JSX.Element {
     const MAX_TESTIMONIALS = 3;
     const testimonials = pickRandomN(useTestimonials(), MAX_TESTIMONIALS);
+    console.log('HEY', testimonials);
     return (
         <Layout>
             <Slide

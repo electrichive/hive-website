@@ -14,6 +14,7 @@ import {
  * is passed data from the testimonials module
  */
 export default function Testimonial(props: TestimonialProps): JSX.Element {
+    console.log('HULLO', props);
     return (
         <Container>
             <HexContainer direction={props.direction}>

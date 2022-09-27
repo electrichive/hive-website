@@ -25,20 +25,20 @@ export function useTestimonials(): TestimonialsProps['testimonials'] {
     const testimonials: TestimonialsProps['testimonials'] = useStaticQuery(
         graphql`
             query {
-                allTestimonialsJson {
-                    edges {
-                        node {
-                            img
-                            author
-                            content
+                site {
+                    siteMetadata {
+                        testimonials {
+                            items {
+                                img
+                                author
+                                content
+                            }
                         }
                     }
                 }
             }
         `
-    ).allDataJson.edges.map(
-        (edge: GatsbyNode<TestimonialWithoutDirection>) => edge.node
-    );
+    ).site.siteMetadata.testimonials.items;
 
     return testimonials;
 }
