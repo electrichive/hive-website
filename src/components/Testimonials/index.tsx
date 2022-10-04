@@ -2,7 +2,6 @@ import Testimonial from 'components/Testimonial';
 import { Container } from './testimonials.styled';
 
 export default function Testimonials(props: TestimonialsProps): JSX.Element {
-    console.log('WHYHELLOTHERE', props.testimonials);
     return (
         <Container>
             <h2>What do others think?</h2>

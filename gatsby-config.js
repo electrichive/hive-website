@@ -76,6 +76,29 @@ module.exports = {
                 },
             ],
         },
+        homeContent: {
+            infobox: {
+                description:
+                    'Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis. Phasellus dapibus massa in auctor venenatis. Donec erat erat, scelerisque sit amet mauris eu, euismod mattis mi. Nulla facilisi. Mauris eleifend ultrices velit ac sodales. Etiam accumsan finibus leo id hendrerit.',
+            },
+            infoimages: [
+                {
+                    content:
+                        'Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis. Phasellus dapibus massa in auctor venenatis. Donec erat erat, scelerisque sit amet mauris eu, euismod mattis mi. Nulla facilisi. Mauris eleifend ultrices velit ac sodales. Etiam accumsan finibus leo id hendrerit.',
+                    subtitle: 'Subtitle',
+                },
+                {
+                    content:
+                        'Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis. Phasellus dapibus massa in auctor venenatis. Donec erat erat, scelerisque sit amet mauris eu, euismod mattis mi. Nulla facilisi. Mauris eleifend ultrices velit ac sodales. Etiam accumsan finibus leo id hendrerit.',
+                    subtitle: 'Subtitle',
+                },
+                {
+                    content:
+                        'Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis. Phasellus dapibus massa in auctor venenatis. Donec erat erat, scelerisque sit amet mauris eu, euismod mattis mi. Nulla facilisi. Mauris eleifend ultrices velit ac sodales. Etiam accumsan finibus leo id hendrerit.',
+                    subtitle: 'Subtitle',
+                },
+            ],
+        },
     },
     plugins: [
         'gatsby-plugin-testing',

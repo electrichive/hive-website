@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+import hexLight from 'static/img/svg/hex-light.svg';
+import hexDark from 'static/img/svg/hex-dark.svg';
 
 export const Container = styled.div`
     margin-bottom: 100px;
@@ -18,7 +20,7 @@ export const Image = styled.div<Pick<InfoImageProps, 'img'>>`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    mask-image: url('../../../static/img/hex-light.svg');
+    mask-image: url(${hexLight});
     mask-size: 300px;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -32,7 +34,7 @@ export const Image = styled.div<Pick<InfoImageProps, 'img'>>`
 `;
 
 const bgRightMixin = css`
-    background-image: url('../../../static/img/hex-dark.svg');
+    background-image: url(${hexDark});
     right: 15px;
     left: 70px;
 `;
@@ -43,7 +45,7 @@ export const ImageBg = styled.div<Pick<InfoImageProps, 'direction'>>`
     bottom: 0;
     width: 320px;
     height: 370px;
-    background-image: url('../../../static/img/hex-light.svg');
+    background-image: url(${hexLight});
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

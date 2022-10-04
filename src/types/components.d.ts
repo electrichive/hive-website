@@ -129,6 +129,11 @@ declare type InfoImagesProps = {
     infoimages: PickOut<InfoImageProps, 'direction'>[];
 };
 
+declare type InfoImage = {
+    content: string;
+    subtitle: string;
+};
+
 declare type IntroProps = {
     title: string;
     content: string;
