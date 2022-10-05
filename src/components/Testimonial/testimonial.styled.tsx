@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import hexLight from 'static/img/svg/hex-light.svg';
+import hexDark from 'static/img/svg/hex-dark.svg';
 
 export const Container = styled.div`
     margin-bottom: 100px;
@@ -17,7 +19,7 @@ export const Image = styled.img<Pick<TestimonialProps, 'img'>>`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    mask-image: url('../../../static/img/hex-light.svg');
+    mask-image: url(${hexLight});
     mask-size: 150px;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -25,7 +27,7 @@ export const Image = styled.img<Pick<TestimonialProps, 'img'>>`
 `;
 
 function bgDir2Img(direction: string): string {
-    return direction === 'right' ? '/img/hex-dark.svg' : '/img/hex-light.svg';
+    return direction === 'right' ? hexDark : hexLight;
 }
 export const ImageBg = styled.div<Pick<TestimonialProps, 'direction'>>`
     z-index: 0;
@@ -54,7 +56,7 @@ export const Author = styled.h4``;
 export const HexContainer = styled.div<Pick<TestimonialProps, 'direction'>>`
     position: relative;
     order: ${props => (props.direction === 'right' ? '3' : '0')};
-
+    width: 30%;
     @media only screen and (max-width: 800px) {
         order: 0;
     }

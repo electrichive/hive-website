@@ -7,8 +7,12 @@ import {
     Testimonials,
 } from 'components';
 import content from './about.json';
-import { pickRandomN, useTestimonials } from 'utils';
+import { pickRandomN } from 'utils';
+import { mapUrlsToProps } from 'src/utils';
+import { useTestimonials } from 'src/graphql/queries/testimonials';
 import { InfoBlockContainer, InfoBlockDiv } from './about.styled';
+import * as R from 'ramda';
+import { useImageUrls } from 'src/graphql/queries/images';
 
 function InfoBlock(props: InfoBlockProps): JSX.Element {
     return (
@@ -22,8 +26,11 @@ function InfoBlock(props: InfoBlockProps): JSX.Element {
 
 export default function PageAbout(): JSX.Element {
     const MAX_TESTIMONIALS = 3;
-    const testimonials = pickRandomN(useTestimonials(), MAX_TESTIMONIALS);
-
+    const images = useImageUrls();
+    const testimonials = R.compose(
+        mapUrlsToProps(images),
+        pickRandomN(MAX_TESTIMONIALS)
+    )(useTestimonials());
     return (
         <Layout>
             <Slide

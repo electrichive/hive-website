@@ -101,6 +101,14 @@ declare type TestimonialsProps = {
     testimonials: TestimonialWithoutDirection[];
 };
 
+declare type ImageUrlsProps = {
+    publicURL: string;
+};
+
+declare interface DataWithImg {
+    img: string;
+}
+
 declare type InfoBoxProps = {
     theme: string;
     title: string;
@@ -132,6 +140,7 @@ declare type InfoImagesProps = {
 declare type InfoImage = {
     content: string;
     subtitle: string;
+    img: string;
 };
 
 declare type IntroProps = {
@@ -144,4 +153,8 @@ declare type ParallaxProps = {
     img: string;
     url: string;
     text: string;
+};
+
+declare type imageUrl = {
+    publicURL: string;
 };

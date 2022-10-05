@@ -1,10 +1,8 @@
 import { Infoimage, Infobox, Layout, Parallax, Slide } from 'components';
 import { ImagesContainer } from './home.styled';
 import { graphql, useStaticQuery } from 'gatsby';
-import dev1 from 'static/img/jpg/developer1.jpg';
-import dev2 from 'static/img/jpg/developer2.jpg';
-import stockCode from 'static/img/jpg/stock-code1.jpg';
-import * as R from 'ramda';
+import { mapUrlsToProps, findImagePath } from 'src/utils';
+import { useImageUrls } from 'src/graphql/queries/images';
 
 /**
  * Local component for displaying InfoImage components
@@ -25,30 +23,28 @@ function InfoImages(props: InfoImagesProps): JSX.Element {
 
 export default function PageHome(): JSX.Element {
     // query site metadata for page content
-    const query = graphql`
-        query HomePageQuery {
-            site {
-                siteMetadata {
-                    homeContent {
-                        infobox {
-                            description
-                        }
-                        infoimages {
-                            content
-                            subtitle
-                        }
+    const query = useStaticQuery(graphql`
+        query HomeQuery {
+            dataJson {
+                homeContent {
+                    infobox {
+                        description
+                    }
+                    infoimages {
+                        content
+                        img
+                        subtitle
                     }
                 }
             }
         }
-    `;
-    const { infobox, infoimages } =
-        useStaticQuery(query).site.siteMetadata.homeContent;
+    `);
 
-    const imgList = [{ img: dev1 }, { img: dev2 }, { img: dev1 }];
-    const formatted = infoimages.map((image, idx) =>
-        R.mergeRight(image, imgList[idx])
-    );
+    const images = useImageUrls();
+    const infobox = query.dataJson.homeContent.infobox;
+    const infoimages: InfoImage[] = query.dataJson.homeContent.infoimages;
+
+    const formatted = mapUrlsToProps(images, infoimages);
     return (
         <Layout>
             <Slide
@@ -60,7 +56,7 @@ export default function PageHome(): JSX.Element {
             <Parallax
                 url="./mentorship"
                 text="Sign Up"
-                img={stockCode}
+                img={findImagePath(images, 'stock-code1')}
                 title="Join Our Mentorship Program Now"
             />
             <Infobox
