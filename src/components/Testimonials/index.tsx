@@ -10,6 +10,7 @@ export default function Testimonials(props: TestimonialsProps): JSX.Element {
                     <Testimonial
                         key={i}
                         direction={i % 2 === 0 ? 'left' : 'right'}
+                        theme={i % 2 === 0 ? 'light' : 'dark'}
                         {...testimonial}
                     />
                 );

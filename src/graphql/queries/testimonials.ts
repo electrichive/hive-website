@@ -6,7 +6,7 @@ import { stripNodes } from 'src/utils';
  */
 export function useTestimonials(): TestimonialsProps['testimonials'] {
     return stripNodes(
-        useStaticQuery(
+        useStaticQuery<GatsbyTypes.TestimonialQueryQuery>(
             graphql`
                 query TestimonialQuery {
                     allTestimonialsJson {

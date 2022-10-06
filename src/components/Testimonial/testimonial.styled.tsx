@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import hexLight from 'static/img/svg/hex-light.svg';
-import hexDark from 'static/img/svg/hex-dark.svg';
 
 export const Container = styled.div`
     margin-bottom: 100px;
@@ -9,43 +7,10 @@ export const Container = styled.div`
 
     @media only screen and (max-width: 800px) {
         flex-direction: column;
+        align-items: center;
     }
 `;
-export const Image = styled.img<Pick<TestimonialProps, 'img'>>`
-    position: relative;
-    min-width: 200px;
-    min-height: 200px;
-    background-image: url(${props => props.img});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    mask-image: url(${hexLight});
-    mask-size: 150px;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    z-index: 1;
-`;
 
-function bgDir2Img(direction: string): string {
-    return direction === 'right' ? hexDark : hexLight;
-}
-export const ImageBg = styled.div<Pick<TestimonialProps, 'direction'>>`
-    z-index: 0;
-    position: absolute;
-    bottom: -5px;
-    left: 10px;
-    width: 150px;
-    height: 175px;
-    background-image: url(${props => bgDir2Img(props.direction)});
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    @media only screen and (max-width: 800px) {
-        left: 50px;
-    }
-`;
-export const Title = styled.h3``;
 export const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -59,5 +24,6 @@ export const HexContainer = styled.div<Pick<TestimonialProps, 'direction'>>`
     width: 30%;
     @media only screen and (max-width: 800px) {
         order: 0;
+        width: 100%;
     }
 `;

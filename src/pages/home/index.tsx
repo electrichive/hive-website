@@ -56,7 +56,7 @@ export default function PageHome(): JSX.Element {
             <Parallax
                 url="./mentorship"
                 text="Sign Up"
-                img={findImagePath(images, 'stock-code1')}
+                img={findImagePath(images, 'stock-code1.jpg')}
                 title="Join Our Mentorship Program Now"
             />
             <Infobox

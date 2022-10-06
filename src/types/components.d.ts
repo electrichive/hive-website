@@ -85,6 +85,7 @@ declare type TestimonialProps = {
     content: string;
     direction: string;
     author: string;
+    theme: 'light' | 'dark';
 };
 
 declare type PickOut<T, U> = {

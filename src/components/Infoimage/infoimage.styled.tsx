@@ -61,7 +61,9 @@ export const ImageBg = styled.div<Pick<InfoImageProps, 'direction'>>`
 export const HexContainer = styled.div<Pick<InfoImageProps, 'direction'>>`
     position: relative;
     order: ${props => (props.direction === 'right' ? '3' : '0')};
-
+    margin: 40px;
+    display: flex;
+    align-items: center;
     @media only screen and (max-width: 800px) {
         order: 0;
     }

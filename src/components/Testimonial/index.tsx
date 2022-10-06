@@ -1,13 +1,11 @@
 import {
     Container,
-    Image,
-    // Title,
     Content,
     HexContainer,
     ContentContainer,
-    ImageBg,
     Author,
 } from './testimonial.styled';
+import { Heximage } from 'components';
 
 /**
  * Component for a standard testimonial module (has an image name and text prop)
@@ -17,10 +15,13 @@ export default function Testimonial(props: TestimonialProps): JSX.Element {
     return (
         <Container>
             <HexContainer direction={props.direction}>
-                <Image img={props.img} alt="Testimonial" />
-                <ImageBg direction={props.direction} />
-                {/* <Title>{props.title}</Title> */}
+                <Heximage
+                    direction={props.direction}
+                    img={props.img}
+                    theme={props.theme}
+                />
             </HexContainer>
+
             <ContentContainer>
                 <Content>{props.content}</Content>
                 <Author>{props.author}</Author>

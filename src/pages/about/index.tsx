@@ -8,7 +8,7 @@ import {
 } from 'components';
 import content from './about.json';
 import { pickRandomN } from 'utils';
-import { mapUrlsToProps } from 'src/utils';
+import { mapUrlsToProps, findImagePath } from 'src/utils';
 import { useTestimonials } from 'src/graphql/queries/testimonials';
 import { InfoBlockContainer, InfoBlockDiv } from './about.styled';
 import * as R from 'ramda';
@@ -59,12 +59,6 @@ export default function PageAbout(): JSX.Element {
                     }}
                 />
             </InfoBlockContainer>
-            <Heximage
-                size="large"
-                direction="right"
-                theme="dark"
-                img="/img/developer1.jpg"
-            />
             <Testimonials testimonials={testimonials} />
         </Layout>
     );

@@ -1,8 +1,11 @@
 import styled, { css } from 'styled-components';
+import hexLight from 'static/img/svg/hex-light.svg';
+import hexDark from 'static/img/svg/hex-dark.svg';
 
 export const HexContainer = styled.div<Pick<HeximageProps, 'size'>>`
     position: relative;
-
+    max-width: 200px;
+    margin: 0 auto;
     ${props => (props.size === 'large' ? large : '')}
 `;
 export const HexImage = styled.div<Pick<HeximageProps, 'img'>>`
@@ -13,7 +16,7 @@ export const HexImage = styled.div<Pick<HeximageProps, 'img'>>`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    mask-image: url('../../../static/img/hex-light.svg');
+    mask-image: url(${hexLight});
     mask-size: 150px;
     mask-repeat: no-repeat;
     mask-position: center;
@@ -44,13 +47,13 @@ export const right = css`
 `;
 
 export const dark = css`
-    background-image: url('../../../static/img/hex-dark.svg');
+    background-image: url(${hexDark});
 `;
 
 export const light = css`
-    background-image: url('../../../static/img/hex-light.svg');
+    background-image: url(${hexLight});
 `;
 
 const large = css`
-    transform: scale(2);
+    transform: scale(1.5);
 `;
