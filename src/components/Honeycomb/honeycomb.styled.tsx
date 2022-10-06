@@ -23,7 +23,7 @@ export const Item = styled.div`
     position: relative;
 
     height: 0;
-    padding-bottom: 90%;
+    padding-bottom: 100%;
 
     &:nth-child(1) {
         grid-column: 3 / span 2;
@@ -120,7 +120,7 @@ export const Inner = styled.div`
     width: 97%;
 
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-
+    background-color: var(${props => props.color});
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -8,7 +8,7 @@ import {
 } from 'components';
 import content from './about.json';
 import { pickRandomN } from 'utils';
-import { mapUrlsToProps, findImagePath } from 'src/utils';
+import { mapUrlsToProps } from 'src/utils';
 import { useTestimonials } from 'src/graphql/queries/testimonials';
 import { InfoBlockContainer, InfoBlockDiv } from './about.styled';
 import * as R from 'ramda';

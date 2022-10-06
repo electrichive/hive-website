@@ -36,7 +36,7 @@ declare type HeximageProps = {
 
 declare type SocialMetadata = {
     socialUrl: string;
-    picUrl: string;
+    img: string;
 };
 
 declare type HoneycombProps = {
@@ -46,7 +46,7 @@ declare type HoneycombProps = {
 declare type HoneycombHexProps = {
     color: string;
     socialUrl?: string;
-    picUrl?: string;
+    img?: string;
 };
 
 declare type LayoutProps = Empty;

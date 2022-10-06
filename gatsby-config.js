@@ -41,23 +41,23 @@ module.exports = {
         honeycomb: {
             socials: [
                 {
-                    picUrl: '/svg/zulip.svg',
+                    img: 'zulip.svg',
                     socialUrl: 'https://electrichive.zulipchat.com',
                 },
                 {
-                    picUrl: '/svg/twitter.svg',
+                    img: 'twitter.svg',
                     socialUrl: 'https://twitter.com',
                 },
                 {
-                    picUrl: '/svg/facebook.svg',
+                    img: 'facebook.svg',
                     socialUrl: 'https://www.facebook.com',
                 },
                 {
-                    picUrl: '/svg/github.svg',
+                    img: 'github.svg',
                     socialUrl: 'https://github.com/electrichive',
                 },
                 {
-                    picUrl: '/svg/linkedin.svg',
+                    img: 'linkedin.svg',
                     socialUrl: 'https://www.linkedin.com',
                 },
             ],

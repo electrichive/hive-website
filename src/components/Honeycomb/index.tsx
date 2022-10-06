@@ -8,7 +8,8 @@ import {
     StyledHoneycomb,
     IconImage,
 } from './honeycomb.styled';
-import { shuffleItems } from 'src/utils';
+import { shuffleItems, mapUrlsToProps } from 'src/utils';
+import { useImageUrls } from 'src/graphql/queries/images';
 
 // how many hexes to include in the honeycomb
 const totalHexes = 18;
@@ -16,7 +17,7 @@ const totalHexes = 18;
 const viableHexIndices = [0, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 16];
 
 // Proportion equal amounts (n = 5) of the different shades of orange
-const oranges = ['orange-light', 'orange-med', 'orange-dark', 'golden'];
+const oranges = ['beige', 'orange', 'darkorange', 'gold'];
 const colorNames = ['white', 'gray-light', 'gray-dark', 'black', ...oranges];
 const proportionedOranges = oranges.reduce(
     (arr, c) => [...arr, ...Array(5).fill(c)],
@@ -33,9 +34,9 @@ const proportionedOranges = oranges.reduce(
 export function HoneycombHex({
     color,
     socialUrl,
-    picUrl,
+    img,
 }: HoneycombHexProps): JSX.Element {
-    const hasSocialIcon = !!socialUrl && !!picUrl;
+    const hasSocialIcon = !!socialUrl && !!img;
 
     // Extracts domain name for img alt-tagging accessibility (if there is a
     // social icon) using regex
@@ -44,14 +45,13 @@ export function HoneycombHex({
     const domain = hasSocialIcon
         ? regexp.exec(socialUrl).groups['domain']
         : null;
-
     return (
         <Item>
             <Outer>
-                <Inner style={{ backgroundColor: color }}>
+                <Inner color={color}>
                     {hasSocialIcon && (
                         <Icon href={socialUrl}>
-                            <IconImage src={picUrl} alt={domain} />
+                            <IconImage src={img} alt={domain} />
                         </Icon>
                     )}
                 </Inner>
@@ -81,45 +81,48 @@ export default function Honeycomb({
                     honeycomb {
                         socials {
                             socialUrl
-                            picUrl
+                            img
                         }
                     }
                 }
             }
         }
     `;
+    const images = useImageUrls();
     const socials =
         socialProps ??
         (useStaticQuery(query).site.siteMetadata.honeycomb
             .socials as SocialMetadata[]);
+    const formattedSocials = mapUrlsToProps(images, socials);
 
     // before the first rendering, pull the actual colors from the document and
     // assign 'state' to the shuffled array of proportioned color names above.
     // combine this with a similarly shuffled random position for each social
     // icon and set the full state
     useLayoutEffect(() => {
-        const docStyle = getComputedStyle(document.body);
-        const domColors = colorNames.reduce(
-            (obj, color) => ({
-                ...obj,
-                [color]: docStyle.getPropertyValue(`--${color}`),
-            }),
-            {}
-        );
+        // const docStyle = getComputedStyle(document.body);
+        // const domColors = colorNames.reduce(
+        //     (obj, color) => ({
+        //         ...obj,
+        //         [color]: docStyle.getPropertyValue(`--${color}`),
+        //     }),
+        //     {}
+        // );
         const state_ = shuffleItems(proportionedOranges)
             .slice(0, totalHexes)
-            .map(color => ({ color: domColors[color] }));
+            .map(color => ({ color: `--${color}` }));
 
         const socialIndices = shuffleItems(viableHexIndices).slice(
             0,
-            socials.length
+            formattedSocials.length
         );
-        socials.forEach((social, i) => {
+        formattedSocials.forEach((social, i) => {
             state_[socialIndices[i]] = {
                 ...state_[socialIndices[i]],
                 ...social,
             };
         });
+
         setState(state_);
     }, [socials]);
 
