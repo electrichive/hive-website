@@ -1,4 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
+import { useImageUrls } from 'src/graphql/queries/images';
+import { mapUrlsToProps } from 'src/utils';
 import {
     StyledFooter,
     FooterColumns,
@@ -8,6 +10,8 @@ import {
     SitemapItem,
     SitemapItemLink,
     SocialMediaLink,
+    SocialMediaLinkImg,
+    FooterLogo,
 } from './footer.styled';
 
 /**
@@ -35,6 +39,7 @@ export default function Footer({
                     honeycomb {
                         socials {
                             socialUrl
+                            img
                         }
                     }
                 }
@@ -42,6 +47,7 @@ export default function Footer({
         }
     `;
 
+    const images = useImageUrls();
     const {
         contactInfo: contactInfoMetadata,
         navbar: { items: sitemapMetadata },
@@ -52,12 +58,11 @@ export default function Footer({
         honeycomb: { socials: FooterProps['socialLinks'] };
     } = useStaticQuery(query).site.siteMetadata;
 
+    const formattedSocials = mapUrlsToProps(images, socialLinksMetadata);
+    const logo = mapUrlsToProps(images, { img: 'favicon.svg' });
     const linksFormatted: [string, string][] = (
-        socialLinks ?? socialLinksMetadata
-    ).map(link => [
-        link.socialUrl.match(/^https:\/\/(?:www\.)?(.)/)[1].toUpperCase(),
-        link.socialUrl,
-    ]);
+        socialLinks ?? formattedSocials
+    ).map(link => [link.socialUrl, link.img]);
 
     return (
         <StyledFooter>
@@ -93,15 +98,17 @@ export default function Footer({
                     <p>
                         <strong>Get Social</strong>
                     </p>
-                    {linksFormatted.map(([label, link], i) => (
+                    {linksFormatted.map(([link, img], i) => (
                         <SocialMediaLink key={i} href={link}>
                             <span>
-                                <i>{label}</i>
+                                <SocialMediaLinkImg
+                                    src={img}
+                                ></SocialMediaLinkImg>
                             </span>
                         </SocialMediaLink>
                     ))}
                 </div>
-                <img src={'/logo.svg'} />
+                <FooterLogo src={logo.img}></FooterLogo>
             </FooterColumns>
             <Copyright>
                 <p>

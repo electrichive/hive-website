@@ -9,7 +9,6 @@ export const Background = styled.div`
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 4px 0 var(--black);
-    position: fixed;
     top: 0;
     z-index: 10;
 `;
@@ -18,6 +17,9 @@ export const Box = styled.div`
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    @media only screen and (max-width: 1000px) {
+        width: 100%;
+    }
 `;
 export const Backdrop = styled.div`
     padding-top: var(--logo-padding);
@@ -37,6 +39,9 @@ export const NavBar = styled.div`
     gap: 9px;
     height: 27%;
     margin-top: auto;
+    @media only screen and (max-width: 1000px) {
+        justify-content: space-between;
+    }
 `;
 
 export const StyledNavLink = styled(Link)`
@@ -58,8 +63,9 @@ export const NavItem = styled.div<NavItemProps>`
     text-overflow: clip;
     border-bottom-width: ${props => `${props.height * 0.13}px`};
 
-    @media all and (max-width: 750px) {
-        width: 15vw;
+    @media all and (max-width: 1000px) {
+        width: 20vw;
+        font-size: calc(0.6em + 1vmin);
     }
     @media all and (max-height: 630px) {
         line-height: 150%;

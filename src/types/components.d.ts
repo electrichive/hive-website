@@ -24,7 +24,7 @@ declare type HeaderProps = {
 declare type FooterProps = {
     sitemapItems?: NavbarItems;
     contactInfo?: ContactInfo;
-    socialLinks?: { socialUrl: string }[];
+    socialLinks?: { socialUrl: string; img: string }[];
 };
 
 declare type HeximageProps = {

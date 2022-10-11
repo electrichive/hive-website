@@ -5,7 +5,6 @@ export const Flow = styled.div`
 `;
 
 export const Content = styled.div`
-    margin-top: var(--header-height);
     display: flex;
     flex-direction: column;
     justify-content: center;

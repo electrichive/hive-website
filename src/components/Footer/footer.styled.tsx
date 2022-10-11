@@ -14,6 +14,11 @@ export const FooterColumns = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    @media only screen and (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 `;
 
 export const FooterContact = styled.div``;
@@ -36,6 +41,18 @@ export const SitemapItem = styled.p`
 export const SocialMediaLink = styled.a`
     text-decoration: none;
     color: var(--white);
+`;
+
+export const SocialMediaLinkImg = styled.img`
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+`;
+
+export const FooterLogo = styled.img`
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
 `;
 
 export const SitemapItemLink = styled(Link)`
