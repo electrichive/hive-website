@@ -24,7 +24,7 @@ function InfoImages(props: InfoImagesProps): JSX.Element {
 export default function PageHome(): JSX.Element {
     // query site metadata for page content
     const query = useStaticQuery(graphql`
-        query HomeQuery {
+        query Home {
             dataJson {
                 homeContent {
                     infobox {

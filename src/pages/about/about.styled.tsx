@@ -15,7 +15,7 @@ export const InfoBlockDiv = styled.div<Partial<InfoBlockProps>>`
         width: 100%;
     }
 
-    ${props => (props.theme ? lightThemeMixin : darkThemeMixin)}
+    ${props => (props.theme === 'light' ? lightThemeMixin : darkThemeMixin)}
 `;
 
 export const InfoBlockContainer = styled.div`

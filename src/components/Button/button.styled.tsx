@@ -17,5 +17,5 @@ export const StyledLink = styled(Link)`
         box-shadow: 2px 2px 5px var(--black);
     }
 
-    ${props => (props.theme ? lightThemeMixin : darkThemeMixin)}
+    ${props => (props.theme === 'light' ? lightThemeMixin : darkThemeMixin)}
 `;

@@ -37,6 +37,9 @@ export const GlobalProvider = createGlobalStyle`
     h2 {
         font-size: 28px;
     }
+    h3 {
+        font-size: 26px;
+    }
 
     h1,
     h2,

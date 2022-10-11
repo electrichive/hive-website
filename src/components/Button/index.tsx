@@ -6,5 +6,10 @@ import { StyledLink } from './button.styled';
 export default function Button(props: ButtonProps): JSX.Element {
     const url = props.url ?? '/';
     const text = props.text ?? '';
-    return <StyledLink to={url}>{text}</StyledLink>;
+    const theme = props.theme ?? 'light';
+    return (
+        <StyledLink to={url} theme={theme}>
+            {text}
+        </StyledLink>
+    );
 }
