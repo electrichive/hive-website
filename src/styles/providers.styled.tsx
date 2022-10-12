@@ -23,6 +23,7 @@ export const GlobalProvider = createGlobalStyle`
         --gold: #f0b309;
         --orange: #f69004;
         --darkorange: #cc5d00;
+        --discord: #7289da;
 
         margin: 0;
         padding: 0;

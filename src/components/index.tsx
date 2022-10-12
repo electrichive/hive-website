@@ -5,6 +5,7 @@ export { default as Header } from './Header';
 export { default as Heximage } from './Heximage';
 export { default as Honeycomb } from './Honeycomb';
 export { default as Infobox } from './Infobox';
+export { default as Discord } from './Discord';
 export { default as Infoimage } from './Infoimage';
 export { default as Intro } from './Intro';
 export { default as Layout } from './Layout';

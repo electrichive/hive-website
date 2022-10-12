@@ -20,21 +20,25 @@ function InfoBlock(props: InfoBlockProps): JSX.Element {
 export default function PageAbout(): JSX.Element {
     // query site metadata for page content
     const query = useStaticQuery(graphql`
-        query About {
-            aboutJson {
-                infoblocks {
-                    text
-                    title
-                }
-                intro {
-                    content
-                    title
+        query AboutQuery {
+            allAboutJson {
+                edges {
+                    node {
+                        infoblocks {
+                            text
+                            title
+                        }
+                        intro {
+                            content
+                            title
+                        }
+                    }
                 }
             }
         }
     `);
-    const intro = query.aboutJson.intro;
-    const infoblocks = query.aboutJson.infoblocks;
+    const intro = query.allAboutJson.edges[0].node.intro;
+    const infoblocks = query.allAboutJson.edges[0].node.infoblocks;
     const MAX_TESTIMONIALS = 3;
     const images = useImageUrls();
     const testimonials = R.compose(
@@ -52,8 +56,8 @@ export default function PageAbout(): JSX.Element {
             <InfoBlockContainer>
                 <InfoBlock
                     theme="light"
-                    title="Mentorship"
-                    text="random text"
+                    title={infoblocks[0].title}
+                    text={infoblocks[0].text}
                     button={{
                         text: 'Sign Up',
                         url: '/mentorship',
@@ -61,8 +65,8 @@ export default function PageAbout(): JSX.Element {
                     }}
                 />
                 <InfoBlock
-                    title="Free Open Source Software (FOSS)"
-                    text="random text"
+                    title={infoblocks[1].title}
+                    text={infoblocks[1].text}
                     theme="dark"
                     button={{
                         theme: 'light',

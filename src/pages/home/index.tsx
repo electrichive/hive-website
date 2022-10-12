@@ -1,4 +1,11 @@
-import { Infoimage, Infobox, Layout, Parallax, Slide } from 'components';
+import {
+    Infoimage,
+    Infobox,
+    Layout,
+    Parallax,
+    Slide,
+    Discord,
+} from 'components';
 import { ImagesContainer } from './home.styled';
 import { graphql, useStaticQuery } from 'gatsby';
 import { mapUrlsToProps, findImagePath } from 'src/utils';
@@ -24,16 +31,18 @@ function InfoImages(props: InfoImagesProps): JSX.Element {
 export default function PageHome(): JSX.Element {
     // query site metadata for page content
     const query = useStaticQuery(graphql`
-        query Home {
-            dataJson {
-                homeContent {
-                    infobox {
-                        description
-                    }
-                    infoimages {
-                        content
-                        img
-                        subtitle
+        query HomeQuery {
+            allHomeJson {
+                edges {
+                    node {
+                        infobox {
+                            description
+                        }
+                        infoimages {
+                            content
+                            img
+                            subtitle
+                        }
                     }
                 }
             }
@@ -41,8 +50,8 @@ export default function PageHome(): JSX.Element {
     `);
 
     const images = useImageUrls();
-    const infobox = query.dataJson.homeContent.infobox;
-    const infoimages: InfoImage[] = query.dataJson.homeContent.infoimages;
+    const infobox = query.allHomeJson.edges[0].node.infobox;
+    const infoimages: InfoImage[] = query.allHomeJson.edges[0].node.infoimages;
 
     const formatted = mapUrlsToProps(images, infoimages);
     return (
@@ -53,6 +62,7 @@ export default function PageHome(): JSX.Element {
                 button={true}
             />
             <InfoImages infoimages={formatted} />
+            <Discord></Discord>
             <Parallax
                 url="./mentorship"
                 text="Sign Up"
