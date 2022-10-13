@@ -134,14 +134,31 @@ declare type InfoImageProps = {
     content: string;
 };
 
+declare type FlipboxProps = {
+    img: string;
+    subtitle?: string;
+    theme: 'light' | 'dark';
+    content: string;
+};
+
 declare type InfoImagesProps = {
     infoimages: PickOut<InfoImageProps, 'direction'>[];
+};
+
+declare type FlipboxesProps = {
+    flipboxes: PickOut<FlipboxProps, 'theme'>[];
 };
 
 declare type InfoImage = {
     content: string;
     subtitle: string;
     img: string;
+};
+
+declare type FlipBox = {
+    img: string;
+    subtitle?: string;
+    content: string;
 };
 
 declare type IntroProps = {

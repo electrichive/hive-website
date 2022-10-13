@@ -14,3 +14,4 @@ export { default as SEO } from './SEO';
 export { default as Slide } from './Slide';
 export { default as Testimonial } from './Testimonial';
 export { default as Testimonials } from './Testimonials';
+export { default as Flipbox } from './Flipbox';
