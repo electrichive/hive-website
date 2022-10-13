@@ -7,8 +7,11 @@ import {
     Slide,
     Testimonials,
 } from 'components';
-import { pickRandomN, useTestimonials } from 'utils';
-import content from './mentorship.json';
+import * as R from 'ramda';
+import { pickRandomN, mapUrlsToProps, findImagePath } from 'utils';
+import { useTestimonials } from 'src/graphql/queries/testimonials';
+import { useImageUrls } from 'src/graphql/queries/images';
+import { graphql, useStaticQuery } from 'gatsby';
 import { Bullet, MentorContent, StyledMentorBlock } from './mentorship.styled';
 
 /**
@@ -21,7 +24,7 @@ function MentorBlock(props: MentorBlockProps): JSX.Element {
             <h2>{props.firsttitle}</h2>
             <MentorContent>
                 <Infoimage
-                    img={props.image}
+                    img={props.img}
                     content={props.content}
                     direction="right"
                 />
@@ -48,23 +51,55 @@ function MentorBlock(props: MentorBlockProps): JSX.Element {
  * Content for testimonials is pulled from data JSON
  */
 export default function Mentorship(): JSX.Element {
+    // query site metadata for page content
+    const query = useStaticQuery<GatsbyTypes.MentorshipQueryQuery>(graphql`
+        query MentorshipQuery {
+            allMentorshipJson {
+                edges {
+                    node {
+                        mentorblocks {
+                            url
+                            firsttitle
+                            secondtitle
+                            content
+                            img
+                            bullets
+                        }
+                        intro {
+                            content
+                            title
+                        }
+                    }
+                }
+            }
+        }
+    `);
+    const images = useImageUrls();
+    const intro = query.allMentorshipJson.edges[0].node.intro;
+    const mentorblocks = mapUrlsToProps(
+        images,
+        query.allMentorshipJson.edges[0].node.mentorblocks
+    );
     const MAX_TESTIMONIALS = 3;
-    const testimonials = pickRandomN(useTestimonials(), MAX_TESTIMONIALS);
+    const testimonials = R.compose(
+        mapUrlsToProps(images),
+        pickRandomN(MAX_TESTIMONIALS)
+    )(useTestimonials());
     return (
         <Layout>
             <Slide
                 title="Mentorship Program"
                 subtitle="Subtitle Mission Statement"
-                button={true}
+                button={false}
             />
-            <Intro {...content.intro} />
-            <MentorBlock theme="light" {...content.mentorblocks[0]} />
-            <MentorBlock theme="dark" {...content.mentorblocks[1]} />
+            <Intro {...intro} />
+            <MentorBlock theme="light" {...mentorblocks[0]} />
+            <MentorBlock theme="dark" {...mentorblocks[1]} />
             <Testimonials testimonials={testimonials} />
             <Parallax
                 url="./resources"
                 text="View Our Resources"
-                img="./img/stock-code1.jpg"
+                img={findImagePath(images, 'stock-code1.jpg')}
             />
         </Layout>
     );

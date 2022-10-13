@@ -1,11 +1,4 @@
-import {
-    Infoimage,
-    Infobox,
-    Layout,
-    Parallax,
-    Slide,
-    Discord,
-} from 'components';
+import { Infoimage, Infobox, Layout, Parallax, Slide } from 'components';
 import { ImagesContainer } from './home.styled';
 import { graphql, useStaticQuery } from 'gatsby';
 import { mapUrlsToProps, findImagePath } from 'src/utils';
@@ -62,7 +55,6 @@ export default function PageHome(): JSX.Element {
                 button={true}
             />
             <InfoImages infoimages={formatted} />
-            <Discord></Discord>
             <Parallax
                 url="./mentorship"
                 text="Sign Up"

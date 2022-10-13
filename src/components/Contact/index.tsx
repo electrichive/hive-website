@@ -27,7 +27,7 @@ export default function Contact({
 
     return (
         <SlideReverse>
-            <Heading>{heading}</Heading>
+            {/* <Heading>{heading}</Heading>
             <Form method="POST">
                 <InputsBox>
                     <CtrlBox>
@@ -63,7 +63,7 @@ export default function Contact({
                 </InputsBox>
 
                 <SubmitButton type="submit" />
-            </Form>
+            </Form> */}
         </SlideReverse>
     );
 }

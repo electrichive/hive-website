@@ -120,7 +120,7 @@ declare type InfoBoxProps = {
 declare type MentorBlockProps = {
     theme?: string;
     firsttitle: string;
-    image: string;
+    img: string;
     content: string;
     secondtitle: string;
     bullets: string[];

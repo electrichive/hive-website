@@ -37,7 +37,7 @@ export const Logo = styled.img`
 export const NavBar = styled.div`
     display: flex;
     gap: 9px;
-    height: 27%;
+    height: 35%;
     margin-top: auto;
     @media only screen and (max-width: 1000px) {
         justify-content: space-between;
@@ -46,13 +46,15 @@ export const NavBar = styled.div`
 
 export const StyledNavLink = styled(Link)`
     text-decoration: none;
+    display: flex;
+    align-items: flex-end;
 `;
 
 type NavItemProps = {
     height: number;
 };
 export const NavItem = styled.div<NavItemProps>`
-    height: 100%;
+    height: 80%;
     width: 10vw;
     text-align: center;
     color: var(--black);
@@ -62,6 +64,14 @@ export const NavItem = styled.div<NavItemProps>`
     border-bottom: 1px solid var(--beige);
     text-overflow: clip;
     border-bottom-width: ${props => `${props.height * 0.13}px`};
+    transition: 0.2s all linear;
+    border-radius: 10px 10px 0px 0px;
+
+    &:hover {
+        color: var(--white);
+        background-color: var(--darkorange);
+        height: 100%;
+    }
 
     @media all and (max-width: 1000px) {
         width: 20vw;

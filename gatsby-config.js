@@ -60,6 +60,10 @@ module.exports = {
                     img: 'linkedin.svg',
                     socialUrl: 'https://www.linkedin.com',
                 },
+                {
+                    img: 'discord.svg',
+                    socialUrl: 'https://discord.gg/HtHctr5J',
+                },
             ],
         },
         testimonials: {

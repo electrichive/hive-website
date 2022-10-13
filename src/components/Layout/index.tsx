@@ -5,6 +5,7 @@ import { PropsWithChildren } from 'react';
 import { Content, Flow } from './layout.styled';
 import { GlobalProvider } from 'styles/providers.styled';
 import Honeycomb from '../Honeycomb';
+import Discord from '../Discord';
 import Footer from 'components/Footer';
 
 /**
@@ -20,7 +21,8 @@ export default function Layout({
             <Flow>
                 <Header />
                 <Content>{children}</Content>
-                <Honeycomb />
+                <Discord />
+                {/* <Honeycomb /> */}
                 <Contact />
                 <Footer />
             </Flow>
