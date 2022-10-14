@@ -47,7 +47,7 @@ function Flipboxes(props: FlipboxesProps): JSX.Element {
 
 export default function PageHome(): JSX.Element {
     // query site metadata for page content
-    const query = useStaticQuery<GatsbyTypes.HomeQueryQuery>(graphql`
+    const query = useStaticQuery(graphql`
         query HomeQuery {
             allHomeJson {
                 edges {

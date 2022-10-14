@@ -84,15 +84,6 @@ module.exports = {
     plugins: [
         'gatsby-plugin-testing',
         {
-            resolve: 'gatsby-plugin-typegen',
-            options: {
-                outputPath: 'src/types/__generated__/gatsbyTypes.d.ts',
-                emitSchema: {
-                    'src/types/__generated__/schema.json': true,
-                },
-            },
-        },
-        {
             resolve: 'gatsby-plugin-root-import',
             options: {
                 static: path.resolve(__dirname, 'static'),

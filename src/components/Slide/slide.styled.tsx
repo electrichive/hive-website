@@ -32,10 +32,12 @@ export const Button = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(${hex});
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background: transparent url(${hex}) center/contain no-repeat;
     height: 200px;
     width: 200px;
+    transition: 0.3s all linear;
+    &:hover {
+        filter: drop-shadow(0 0 0.75rem var(--darkorange));
+        transform: scale(1.035);
+    }
 `;

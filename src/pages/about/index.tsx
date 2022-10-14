@@ -19,7 +19,7 @@ function InfoBlock(props: InfoBlockProps): JSX.Element {
 
 export default function PageAbout(): JSX.Element {
     // query site metadata for page content
-    const query = useStaticQuery<GatsbyTypes.AboutQueryQuery>(graphql`
+    const query = useStaticQuery(graphql`
         query AboutQuery {
             allAboutJson {
                 edges {
