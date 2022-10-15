@@ -5,6 +5,7 @@ import {
     Parallax,
     Slide,
     Flipbox,
+    FadeInSection,
 } from 'components';
 import { ImagesContainer, FlipContainer } from './home.styled';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -33,15 +34,17 @@ function InfoImages(props: InfoImagesProps): JSX.Element {
  */
 function Flipboxes(props: FlipboxesProps): JSX.Element {
     return (
-        <FlipContainer>
-            {props.flipboxes.map((flipbox, i) => (
-                <Flipbox
-                    key={i}
-                    {...flipbox}
-                    theme={i % 2 === 0 ? 'light' : 'dark'}
-                />
-            ))}
-        </FlipContainer>
+        <FadeInSection>
+            <FlipContainer>
+                {props.flipboxes.map((flipbox, i) => (
+                    <Flipbox
+                        key={i}
+                        {...flipbox}
+                        theme={i % 2 === 0 ? 'light' : 'dark'}
+                    />
+                ))}
+            </FlipContainer>
+        </FadeInSection>
     );
 }
 

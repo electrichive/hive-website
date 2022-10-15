@@ -36,8 +36,9 @@ export const Button = styled.div`
     height: 200px;
     width: 200px;
     transition: 0.3s all linear;
+    color: var(--black);
     &:hover {
+        color: var(--darkorange);
         filter: drop-shadow(0 0 0.75rem var(--darkorange));
-        transform: scale(1.035);
     }
 `;
