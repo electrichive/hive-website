@@ -1,6 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { createFilePath } = require('gatsby-source-filesystem');
 
+const hiddenPages = ['foss'];
+
 exports.onCreateBabelConfig = ({ actions }) => {
     actions.setBabelPreset({
         name: 'babel-preset-gatsby',
@@ -26,4 +28,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
             value: `/sandbox${relativeFilePath}`,
         });
     }
+};
+
+exports.onCreatePage = async ({ page, actions: { deletePage } }) => {
+    hiddenPages.map(hiddenPage => {
+        console.log(page.path);
+        if (page.path === `/${hiddenPage}/`) {
+            deletePage(page);
+        }
+    });
 };
