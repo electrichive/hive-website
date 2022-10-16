@@ -23,7 +23,7 @@ function InfoImages(props: InfoImagesProps): JSX.Element {
 
 export default function PageHome(): JSX.Element {
     // query site metadata for page content
-    const query = useStaticQuery(graphql`
+    const query = useStaticQuery<GatsbyTypes.HomeQueryQuery>(graphql`
         query HomeQuery {
             allHomeJson {
                 edges {

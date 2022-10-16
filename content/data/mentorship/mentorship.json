@@ -1,36 +1,37 @@
 {
     "intro": {
         "title":"What is the mentorship program?",
-        "content": "Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis. Phasellus dapibus massa in auctor venenatis. Donec erat erat, scelerisque sit amet mauris eu, euismod mattis mi. Nulla facilisi. Mauris eleifend ultrices velit ac sodales. Etiam accumsan finibus leo id hendrerit."
+        "content": "One of our primary missions is to mentor budding programmers, and we pursue this mission by running an active mentorship program. Our mentorship program is primarily built around 1-on-1 pairings of mentors and mentees, with text chats for most short conversations and questions, and then recurring 1-on-1 live meetings every 1 to 4 weeks, depending on the particular needs of the mentees."
     },
     "mentorblocks": [
         {
-            "url": "/jointhehive",
+            "url": "https://forms.gle/1kgX1n9T9zXEkEEm8",
             "firsttitle": "Is mentorship for you?",
             "secondtitle": "Why have mentoring?",
-            "content": "Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis. Phasellus dapibus massa in auctor venenatis. Donec erat erat, scelerisque sit amet mauris eu, euismod mattis mi. Nulla facilisi. Mauris eleifend ultrices velit ac sodales. Etiam accumsan finibus leo id hendrerit.",
+            "content": "If you want to be a mentee, no prior experience is required! If you want to be a mentor, we typically recommend that you have at least a year's worth of active programming experience.",
             "img": "developer1.jpg",
             "bullets": [
-                "Bullet 1",
-                "Bullet 2",
-                "Bullet 3",
-                "Bullet 4",
-                "Bullet 5"
-            ]
+                "pairing with experienced mentors who can help guide your skill and career development",
+                "an active, friendly community to develop with",
+                "members with a wide range of skill levels, from complete novices to highly-experienced developers",
+                "a fairly extensive collection of learning resources",
+                "a job/coding interview training area, with learning and practice resources"
+            ],
+            "buttontext": "Become a Mentee"
         },
         {
-            "url": "/jointhehive",
+            "url": "https://forms.gle/KX3vXSsC5vk6xu3M6",
             "firsttitle": "Got what it takes to mentor?",
             "secondtitle": "What do you need?",
             "content": "Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis. Phasellus dapibus massa in auctor venenatis. Donec erat erat, scelerisque sit amet mauris eu, euismod mattis mi. Nulla facilisi. Mauris eleifend ultrices velit ac sodales. Etiam accumsan finibus leo id hendrerit.",
             "img": "developer2.jpg",
             "bullets": [
-                "Bullet 1",
-                "Bullet 2",
-                "Bullet 3",
-                "Bullet 4",
-                "Bullet 5"
-            ]
+                "Our mentorship program is organized and established, with infrastructure & tooling in place for fundamental needs like communication (text, voice, and video), scheduling, and web hosting.",
+                "We have a system for mentorship that has been built over years of experience, including a mentee & mentor intake/application process, reminders of regular check-ins, and practices for reducing drop-outs and absenteeism.",
+                "We have a number of mentors available, which reduces the burden of work on any given mentor to answer a specific question at a specific time, and makes things like providing coverage for one mentor to take a break or vacation possible.",
+                "We actively collect and distribute teaching/learning resources for mentors and mentees."
+            ],
+            "buttontext": "Become a Mentor"
         }
     ]
 }

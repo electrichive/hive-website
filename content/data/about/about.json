@@ -1,16 +1,15 @@
 {
     "intro": {
         "title":"Who Are The Electric Hive?",
-        "content": "Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis. Phasellus dapibus massa in auctor venenatis. Donec erat erat, scelerisque sit amet mauris eu, euismod mattis mi. Nulla facilisi. Mauris eleifend ultrices velit ac sodales. Etiam accumsan finibus leo id hendrerit."
+        "content": "We strive to be an inclusive, welcoming, and helpful community, and we invite anyone of a like mind to join us. We include young people, old people, complete newbies, wizard hackers, PhD holders, self-taught coders, and everyone in between. If you are a person who likes other people and wants to program, you belong with us!\nIf you're new and would like to join us and start your path in programming, if you are experienced and would like to help others in their journey, or if you just like the idea of our community, please join us!"
     },
     "infoblocks": [
         {
             "title": "Mentorship",
-            "text": "Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis. Phasellus dapibus massa in auctor venenatis. Donec erat erat, scelerisque sit amet mauris eu, euismod mattis mi. Nulla facilisi. Mauris eleifend ultrices velit ac sodales. Etiam accumsan finibus leo id hendrerit."
-        },
+            "text": "The world of programming can be lonely, difficult to penetrate, and confusing to navigate. We provide guidance and companionship for those traveling the programming road. Members of the Hive support one another in figuring out where to begin, where to go, and how to overcome coding obstacles and the occasional (or, sometimes, more than occasional) bouts of procrastination."        },
         {
             "title": "Free Open Source Software (FOSS)",
-            "text": "Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis. Phasellus dapibus massa in auctor venenatis. Donec erat erat, scelerisque sit amet mauris eu, euismod mattis mi. Nulla facilisi. Mauris eleifend ultrices velit ac sodales. Etiam accumsan finibus leo id hendrerit."
+            "text": "We are a free and open source software (FOSS)-focused community. If you would like to help pitch in on a FOSS project, or want to recruit helping hands for a FOSS project you maintain, please join our Zulip and reach out on the #team-up stream!"
         }
     ]
 }

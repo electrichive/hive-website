@@ -41,7 +41,7 @@ function MentorBlock(props: MentorBlockProps): JSX.Element {
             <Button
                 url={props.url}
                 theme={themeContrast}
-                text="Become a Mentee"
+                text={props.buttontext}
             />
         </StyledMentorBlock>
     );
@@ -64,6 +64,7 @@ export default function Mentorship(): JSX.Element {
                             content
                             img
                             bullets
+                            buttontext
                         }
                         intro {
                             content
