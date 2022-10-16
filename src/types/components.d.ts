@@ -125,6 +125,7 @@ declare type MentorBlockProps = {
     secondtitle: string;
     bullets: string[];
     url: string;
+    direction: string;
 };
 
 declare type InfoImageProps = {
