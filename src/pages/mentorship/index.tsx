@@ -12,7 +12,11 @@ import { pickRandomN, mapUrlsToProps, findImagePath } from 'utils';
 import { useTestimonials } from 'src/graphql/queries/testimonials';
 import { useImageUrls } from 'src/graphql/queries/images';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Bullet, MentorContent, StyledMentorBlock } from './mentorship.styled';
+import {
+    Bullet,
+    MentorContent,
+    StyledMentorBlock,
+} from '../../styles/page-styles/mentorship/mentorship.styled';
 
 /**
  *

@@ -1,4 +1,4 @@
-import { darkThemeMixin, lightThemeMixin } from 'src/styles/mixins.styled';
+import { darkThemeMixin, lightThemeMixin } from 'styles/mixins.styled';
 import styled from 'styled-components';
 
 export const InfoBlock = styled.div<Pick<InfoBoxProps, 'theme'>>`

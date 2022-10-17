@@ -7,7 +7,10 @@ import {
     Flipbox,
     FadeInSection,
 } from 'components';
-import { ImagesContainer, FlipContainer } from './home.styled';
+import {
+    ImagesContainer,
+    FlipContainer,
+} from '../../styles/page-styles/home/home.styled';
 import { graphql, useStaticQuery } from 'gatsby';
 import { mapUrlsToProps, findImagePath } from 'src/utils';
 import { useImageUrls } from 'src/graphql/queries/images';

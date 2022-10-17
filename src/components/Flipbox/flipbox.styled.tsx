@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { darkThemeMixin, lightThemeMixin } from 'src/styles/mixins.styled';
+import { darkThemeMixin, lightThemeMixin } from 'styles/mixins.styled';
 
 export const FlipboxInner = styled.div`
     position: relative;

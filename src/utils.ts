@@ -1,5 +1,4 @@
 import * as R from 'ramda';
-import { useImageUrls } from './graphql/queries/images';
 
 /**
  * Shuffles an array of items unique to the application. Uses a random
