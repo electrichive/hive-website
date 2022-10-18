@@ -1,4 +1,11 @@
-import { Intro, Slide, Layout, Button, Testimonials } from 'components';
+import {
+    Intro,
+    Slide,
+    Layout,
+    Button,
+    Testimonials,
+    FadeInSection,
+} from 'components';
 import { pickRandomN } from 'utils';
 import { mapUrlsToProps } from 'src/utils';
 import { useTestimonials } from 'src/graphql/queries/testimonials';
@@ -52,7 +59,9 @@ export default function PageAbout(): JSX.Element {
                 subtitle="Subtitle Mission Statement"
                 button={true}
             />
-            <Intro {...intro} />
+            <FadeInSection>
+                <Intro {...intro} />
+            </FadeInSection>
             <InfoBlockContainer>
                 <InfoBlock
                     theme="light"
@@ -75,7 +84,9 @@ export default function PageAbout(): JSX.Element {
                     }}
                 />
             </InfoBlockContainer>
-            <Testimonials testimonials={testimonials} />
+            <FadeInSection>
+                <Testimonials testimonials={testimonials} />
+            </FadeInSection>
         </Layout>
     );
 }

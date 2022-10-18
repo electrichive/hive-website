@@ -1,5 +1,13 @@
-import { Infoimage, Infobox, Layout, Parallax, Slide } from 'components';
-import { ImagesContainer } from './home.styled';
+import {
+    Infoimage,
+    Infobox,
+    Layout,
+    Parallax,
+    Slide,
+    Flipbox,
+    FadeInSection,
+} from 'components';
+import { ImagesContainer, FlipContainer } from './home.styled';
 import { graphql, useStaticQuery } from 'gatsby';
 import { mapUrlsToProps, findImagePath } from 'src/utils';
 import { useImageUrls } from 'src/graphql/queries/images';
@@ -18,6 +26,25 @@ function InfoImages(props: InfoImagesProps): JSX.Element {
                 />
             ))}
         </ImagesContainer>
+    );
+}
+
+/**
+ * Local component for displaying Flipboxes components
+ */
+function Flipboxes(props: FlipboxesProps): JSX.Element {
+    return (
+        <FadeInSection>
+            <FlipContainer>
+                {props.flipboxes.map((flipbox, i) => (
+                    <Flipbox
+                        key={i}
+                        {...flipbox}
+                        theme={i % 2 === 0 ? 'light' : 'dark'}
+                    />
+                ))}
+            </FlipContainer>
+        </FadeInSection>
     );
 }
 
@@ -45,8 +72,12 @@ export default function PageHome(): JSX.Element {
     const images = useImageUrls();
     const infobox = query.allHomeJson.edges[0].node.infobox;
     const infoimages: InfoImage[] = query.allHomeJson.edges[0].node.infoimages;
+    const flipboxes: typeof Flipbox[] =
+        query.allHomeJson.edges[0].node.infoimages;
 
-    const formatted = mapUrlsToProps(images, infoimages);
+    const formattedInfoimages = mapUrlsToProps(images, infoimages);
+    const formattedFlipboxes = mapUrlsToProps(images, flipboxes);
+
     return (
         <Layout>
             <Slide
@@ -54,7 +85,8 @@ export default function PageHome(): JSX.Element {
                 subtitle="Subtitle Mission Statement"
                 button={true}
             />
-            <InfoImages infoimages={formatted} />
+            {/* <InfoImages infoimages={formattedInfoimages} /> */}
+            <Flipboxes flipboxes={formattedFlipboxes} />
             <Parallax
                 url="./mentorship"
                 text="Sign Up"
@@ -62,7 +94,7 @@ export default function PageHome(): JSX.Element {
                 title="Join Our Mentorship Program Now"
             />
             <Infobox
-                title="Contribute To Our FOSS"
+                title="Community"
                 description={infobox.description}
                 content="..."
                 theme="dark"

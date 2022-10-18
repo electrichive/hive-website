@@ -7,7 +7,7 @@ export const InfoBlockDiv = styled.div<Partial<InfoBlockProps>>`
     align-items: center;
     justify-content: center;
     width: 50%;
-    min-height: 400px;
+    min-height: 600px;
     padding: 20px;
     text-align: center;
 

@@ -26,7 +26,7 @@ function MentorBlock(props: MentorBlockProps): JSX.Element {
                 <Infoimage
                     img={props.img}
                     content={props.content}
-                    direction="right"
+                    direction={props.direction}
                 />
             </MentorContent>
             <h2>{props.secondtitle}</h2>
@@ -52,7 +52,7 @@ function MentorBlock(props: MentorBlockProps): JSX.Element {
  */
 export default function Mentorship(): JSX.Element {
     // query site metadata for page content
-    const query = useStaticQuery<GatsbyTypes.MentorshipQueryQuery>(graphql`
+    const query = useStaticQuery(graphql`
         query MentorshipQuery {
             allMentorshipJson {
                 edges {
@@ -94,8 +94,8 @@ export default function Mentorship(): JSX.Element {
                 button={false}
             />
             <Intro {...intro} />
-            <MentorBlock theme="light" {...mentorblocks[0]} />
-            <MentorBlock theme="dark" {...mentorblocks[1]} />
+            <MentorBlock theme="light" direction="right" {...mentorblocks[0]} />
+            <MentorBlock theme="dark" direction="left" {...mentorblocks[1]} />
             <Testimonials testimonials={testimonials} />
             <Parallax
                 url="./resources"

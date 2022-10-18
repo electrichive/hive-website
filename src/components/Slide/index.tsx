@@ -10,7 +10,7 @@ const StyledLink = styled(Link)`
     font-weight: 700;
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: inherit;
 `;
 
 //Button specific to the slide so created here
