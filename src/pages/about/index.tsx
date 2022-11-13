@@ -9,17 +9,28 @@ import {
 import { pickRandomN } from 'utils';
 import { mapUrlsToProps } from 'src/utils';
 import { useTestimonials } from 'src/graphql/queries/testimonials';
-import { InfoBlockContainer, InfoBlockDiv } from './about.styled';
+import {
+    InfoBlockDiv,
+    InfoContent,
+    InfoImage,
+    InfoTitle,
+    InfoDescription,
+} from '../../styles/page-styles/about/about.styled';
 import { graphql, useStaticQuery } from 'gatsby';
 import * as R from 'ramda';
 import { useImageUrls } from 'src/graphql/queries/images';
 
 function InfoBlock(props: InfoBlockProps): JSX.Element {
     return (
-        <InfoBlockDiv theme={props.theme}>
-            <h3>{props.title}</h3>
-            <p>{props.text}</p>
-            <Button {...props.button} />
+        <InfoBlockDiv>
+            <InfoContent theme={props.theme}>
+                <InfoTitle theme={props.theme}>{props.title}</InfoTitle>
+                <InfoDescription theme={props.theme}>
+                    {props.text}
+                </InfoDescription>
+                <Button {...props.button} />
+            </InfoContent>
+            <InfoImage src={props.img}></InfoImage>
         </InfoBlockDiv>
     );
 }
@@ -34,6 +45,7 @@ export default function PageAbout(): JSX.Element {
                         infoblocks {
                             text
                             title
+                            img
                         }
                         intro {
                             content
@@ -48,6 +60,7 @@ export default function PageAbout(): JSX.Element {
     const infoblocks = query.allAboutJson.edges[0].node.infoblocks;
     const MAX_TESTIMONIALS = 3;
     const images = useImageUrls();
+    const updatedInfoblocks = mapUrlsToProps(images, infoblocks);
     const testimonials = R.compose(
         mapUrlsToProps(images),
         pickRandomN(MAX_TESTIMONIALS)
@@ -62,28 +75,32 @@ export default function PageAbout(): JSX.Element {
             <FadeInSection>
                 <Intro {...intro} />
             </FadeInSection>
-            <InfoBlockContainer>
+            <FadeInSection>
                 <InfoBlock
                     theme="light"
-                    title={infoblocks[0].title}
-                    text={infoblocks[0].text}
+                    title={updatedInfoblocks[0].title}
+                    text={updatedInfoblocks[0].text}
+                    img={updatedInfoblocks[0].img}
                     button={{
                         text: 'Sign Up',
                         url: '/mentorship',
-                        theme: 'dark',
+                        theme: 'light',
                     }}
                 />
+            </FadeInSection>
+            <FadeInSection>
                 <InfoBlock
-                    title={infoblocks[1].title}
-                    text={infoblocks[1].text}
+                    title={updatedInfoblocks[1].title}
+                    text={updatedInfoblocks[1].text}
+                    img={updatedInfoblocks[1].img}
                     theme="dark"
                     button={{
-                        theme: 'light',
+                        theme: 'dark',
                         text: 'Contribute',
                         url: '/foss',
                     }}
                 />
-            </InfoBlockContainer>
+            </FadeInSection>
             <FadeInSection>
                 <Testimonials testimonials={testimonials} />
             </FadeInSection>

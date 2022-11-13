@@ -18,6 +18,9 @@ export default {
     testRunner: 'jest-jasmine2',
     moduleNameMapper: {
         '.+\\.(png|svg|jpg)$': '<rootDir>/tests/__mocks__/fileMock.ts',
+        '^src/graphql/queries/(.+)$': '<rootDir>/src/graphql/queries/$1',
+        '^components$': '<rootDir>/src/components',
+        '^src/utils$': '<rootDir>/src/utils',
         ...moduleNameMappings,
     },
     setupFilesAfterEnv: ['<rootDir>/tests/setupTestEnv.ts'],

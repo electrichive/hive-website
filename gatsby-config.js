@@ -28,9 +28,10 @@ module.exports = {
         navbar: {
             items: [
                 ['About Us', '/about'],
-                ['FOSS', '/foss'],
+                // ['FOSS', '/foss'], replace when we need the foss page
                 ['Mentorship', '/mentorship'],
-                ['Contact', '/contact'],
+                ['Bootcamp', '/bootcamp'],
+                ['Join Us', '/contact'],
             ],
         },
         contactInfo: {

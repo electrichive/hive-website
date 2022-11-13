@@ -7,7 +7,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 export default function PageFoss(): JSX.Element {
     // query site metadata for page content
-    const query = useStaticQuery<GatsbyTypes.FossQueryQuery>(graphql`
+    const query = useStaticQuery(graphql`
         query FossQuery {
             allFossJson {
                 edges {
