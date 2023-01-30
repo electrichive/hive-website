@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkelectric_hive_website_2_0=self.webpackChunkelectric_hive_website_2_0||[]).push([[563],{6961:function(e,t,c){c.r(t),c.d(t,{default:function(){return r}});var i=c(8086),n=c(5893);function r(){return(0,n.jsx)(i.Ar,{})}}}]);
+//# sourceMappingURL=component---src-pages-contact-index-tsx-06e8fd7a4269586114c7.js.map

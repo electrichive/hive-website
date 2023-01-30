@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-sandbox-index-tsx",
+    "path": "/sandbox/",
+    "result": {"data":{"allMdx":{"nodes":[{"frontmatter":{"date":"September 26, 2021","title":"Sandbox MDX"},"parent":{"modifiedTime":"2022-08-14T17:54:44.106Z"},"id":"0c8813d9-ac5a-5612-8935-d5280bd9f790","slug":"initial/"},{"frontmatter":{"date":"October 26, 2021","title":"Sandbox MDX (cont.)"},"parent":{"modifiedTime":"2022-08-14T17:54:44.106Z"},"id":"aeecc91f-350e-5aca-b3b0-ddc9c8da8c3c","slug":"secondary/"},{"frontmatter":{"date":"November 26, 2021","title":"Coding Sandbox example in MDX"},"parent":{"modifiedTime":"2022-08-14T17:54:44.097Z"},"id":"e8a93497-71a1-5453-b90c-1cb1a6ee2c5a","slug":"coding/"}]}},"pageContext":{}},
+    "staticQueryHashes": ["1193705211","127410513","3232614290","747541314"]}

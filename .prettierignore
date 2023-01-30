@@ -1,7 +1,0 @@
-.cache/
-public/
-coverage/
-node_modules/
-data/
-.hygen/
-package-lock.json
