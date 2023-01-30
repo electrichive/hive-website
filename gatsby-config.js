@@ -6,6 +6,7 @@
 const path = require('path');
 
 module.exports = {
+    pathPrefix: "/",
     siteMetadata: {
         title: 'Electric Hive',
         description: 'INSERT DESCRIPTION HERE',
