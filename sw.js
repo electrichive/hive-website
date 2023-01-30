@@ -27,20 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "framework-3c8df7c38c1be18c8bfa.js"
+    "url": "framework-ba1e31de8a824ba7acac.js"
   },
   {
     "url": "styles.4b127eb0a25cfb6cd221.css"
   },
   {
-    "url": "app-128bab9a632fb8ffa772.js"
+    "url": "app-c2a3ddba5a86b7fc9eab.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "09bc28494a8c08342f9c4a0f65dd288b"
+    "revision": "cad11eb9edc91d2563ba39e5f107ea49"
   },
   {
-    "url": "webpack-runtime-1c5412626961e2d61ff4.js"
+    "url": "webpack-runtime-daba6352412b409e2a62.js"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-29fd2c62d887e48360fb.js"
@@ -51,19 +51,19 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "f8c23ce53c6cc157af1818dc5994f146"
+    "revision": "24f2e34017fe7738a00be7cb12a95b5a"
   },
   {
-    "url": "polyfill-fd47c471d9913d252251.js"
+    "url": "polyfill-c0fadaa261b5b2543979.js"
   },
   {
-    "url": "af145db2f062e694745154d75559c25c073c4548-7ffe1724d851a6207a22.js"
+    "url": "af145db2f062e694745154d75559c25c073c4548-4919f8f79940ea92976f.js"
   },
   {
-    "url": "cc66c7a10e36909d80bfb2506a61f43ef9a7a3b1-e6e68c929fc332301482.js"
+    "url": "cc66c7a10e36909d80bfb2506a61f43ef9a7a3b1-c1193ea45daa037c893d.js"
   },
   {
-    "url": "component---src-pages-about-index-tsx-202778d1d87fb9bbd4c2.js"
+    "url": "component---src-pages-about-index-tsx-7fd8576233dab2566be5.js"
   },
   {
     "url": "page-data/about/page-data.json",
@@ -75,7 +75,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/127410513.json",
-    "revision": "fe31bc68c419a17bb4f636c1dbc32bf0"
+    "revision": "6d78eb155654983905bc9315dbdd3d90"
   },
   {
     "url": "page-data/sq/d/1700984419.json",
@@ -106,7 +106,7 @@ self.__precacheManifest = [
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "431041f9970344770dcce2f2ac0d2de1"
+    "revision": "776ee92c1516ec96602b19665324089f"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -193,12 +193,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^/hive-website`), ``)
+  pathname = pathname.replace(new RegExp(`^/staging`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/hive-website/app-128bab9a632fb8ffa772.js`))) {
+  if (!resources || !(await caches.match(`/staging/app-c2a3ddba5a86b7fc9eab.js`))) {
     return await fetch(event.request)
   }
 
@@ -211,7 +211,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/hive-website/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/staging/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
