@@ -7,5 +7,6 @@ schema.json
 __generated__/
 .testing-static-queries.json
 .direnv/
-*.swp
+*.sw*
+config.tf.json
 
