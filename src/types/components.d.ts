@@ -127,6 +127,7 @@ declare type MentorBlockProps = {
     secondtitle: string;
     bullets: string[];
     url: string;
+    buttontext: string;
     direction: string;
 };
 

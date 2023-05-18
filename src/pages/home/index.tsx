@@ -53,7 +53,7 @@ function Flipboxes(props: FlipboxesProps): JSX.Element {
 
 export default function PageHome(): JSX.Element {
     // query site metadata for page content
-    const query = useStaticQuery(graphql`
+    const query = useStaticQuery<GatsbyTypes.HomeQueryQuery>(graphql`
         query HomeQuery {
             allHomeJson {
                 edges {
@@ -97,7 +97,7 @@ export default function PageHome(): JSX.Element {
                 title="Join Our Mentorship Program Now"
             />
             <Infobox
-                title="Contribute To Our FOSS"
+                title="Community"
                 description={infobox.description}
                 content="..."
                 theme="dark"

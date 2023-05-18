@@ -11,4 +11,3 @@ jobs:
             - uses: actions/setup-node@v2
             - run: npm ci
             - run: npm run deploy:github
-

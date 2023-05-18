@@ -1,16 +1,16 @@
 {
     "infobox": {
-        "description":"Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis. Phasellus dapibus massa in auctor venenatis. Donec erat erat, scelerisque sit amet mauris eu, euismod mattis mi. Nulla facilisi. Mauris eleifend ultrices velit ac sodales. Etiam accumsan finibus leo id hendrerit."
+        "description":"The world of programming can be lonely, difficult to penetrate, and confusing to navigate. We provide guidance and companionship for those traveling the programming road. Members of the Hive support one another in figuring out where to begin, where to go, and how to overcome coding obstacles and the occasional (or, sometimes, more than occasional) bouts of procrastination."
     },
     "infoimages": [
         {
-            "content":"Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis.",
+            "content":"We help community members learn and grow as programmers, and produce programming and technology-related educational materials.",
             "subtitle": "Learn To Code",
             "img": "developer1.jpg"
         },
         {
             "content":"Nullam laoreet pulvinar gravida. Aliquam auctor dolor urna, at mattis tortor dignissim vel. Proin eu velit ultrices arcu mattis consequat sit amet sed diam. Fusce odio leo, tristique quis lobortis vel, commodo id turpis.",
-            "subtitle": "Contribute To FOSS",
+            "subtitle": "Join our Python Bootcamp",
             "img": "developer2.jpg"
         },
         {
