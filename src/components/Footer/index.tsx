@@ -87,7 +87,7 @@ export default function Footer({
                         ([key, value], i) => (
                             <p key={i}>
                                 <strong>
-                                    {key.at(0).toUpperCase() + key.slice(1)}:{' '}
+                                    {key[0].toUpperCase() + key.slice(1)}:{' '}
                                 </strong>
                                 {value}
                             </p>

@@ -4,6 +4,7 @@ declare type ButtonProps = {
     text?: string;
     theme?: string;
     url?: string;
+    direction?: 'center' | 'left' | 'right';
 };
 
 declare type ContactProps = {
@@ -71,6 +72,7 @@ declare type InfoBlockProps = {
     title?: string;
     text?: string;
     button: ButtonProps;
+    img: string;
 };
 
 declare type SlideProps = {

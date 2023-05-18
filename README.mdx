@@ -6,7 +6,12 @@ This repository hosts the code for the new website of the Electric Hive, an inte
 
 ## Demo
 
--   [hive-website.vercel.app](hive-website.vercel.app)
+-   [electrichive.github.io/staging](electrichive.github.io/staging)
+
+## Deploy to Staging
+
+The [staging site](electrichive.github.io/staging) is served from the `gh-pages` of `github.com/electrichive/hive-website`.
+To deploy from the latest updates on `dev`, run `npm run deploy:github`.
 
 ## Authors
 
@@ -69,6 +74,13 @@ npm run storybook
 ```bash
 npm run new-component
 ```
+
+### Hide an existing page
+
+-   In **gatsby-config.js**
+    -   Edit **> siteMetaData > navbar > items**
+-   In **gatsby-node.js**
+    -   Edit **> hiddenPages array with name of page route**
 
 ## Project Structure
 

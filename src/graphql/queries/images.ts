@@ -6,7 +6,7 @@ import { stripNodes } from 'src/utils';
  * @returns all image urls
  */
 export function useImageUrls(): ImageUrlsProps[] {
-    const query = useStaticQuery<GatsbyTypes.ImageQueryQuery>(
+    const query = useStaticQuery(
         graphql`
             query ImageQuery {
                 allFile(filter: { sourceInstanceName: { eq: "images" } }) {
