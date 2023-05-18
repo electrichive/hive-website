@@ -6,10 +6,13 @@
     "infoblocks": [
         {
             "title": "Mentorship",
-            "text": "The world of programming can be lonely, difficult to penetrate, and confusing to navigate. We provide guidance and companionship for those traveling the programming road. Members of the Hive support one another in figuring out where to begin, where to go, and how to overcome coding obstacles and the occasional (or, sometimes, more than occasional) bouts of procrastination."        },
+            "text": "The world of programming can be lonely, difficult to penetrate, and confusing to navigate. We provide guidance and companionship for those traveling the programming road. Members of the Hive support one another in figuring out where to begin, where to go, and how to overcome coding obstacles and the occasional (or, sometimes, more than occasional) bouts of procrastination.",
+            "img": "developer1.jpg"
+        },
         {
             "title": "Free Open Source Software (FOSS)",
-            "text": "We are a free and open source software (FOSS)-focused community. If you would like to help pitch in on a FOSS project, or want to recruit helping hands for a FOSS project you maintain, please join our Zulip and reach out on the #team-up stream!"
+            "text": "We are a free and open source software (FOSS)-focused community. If you would like to help pitch in on a FOSS project, or want to recruit helping hands for a FOSS project you maintain, please join our Zulip and reach out on the #team-up stream!",
+            "img": "stock-code1.jpg"
         }
     ]
 }
